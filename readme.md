@@ -40,6 +40,7 @@ This code has been developed under the support of the following:
 Installation with cmake:
 =======================================================================
 1. Install pre-required libs:
+
   1) Install CMake [http://www.cmake.org/download/]
 
   2) Install deal.II (version 8.4.1 recommended) with Trilinos [www.dealii.org/download.html]

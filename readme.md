@@ -45,11 +45,15 @@ Installation with cmake:
   2) Install deal.II (version 8.4.1 recommended) with Trilinos [www.dealii.org/download.html]
      Deal.II OSX binaries include full packages of deal.ii with Trillions and other useful libs.
 
+
   3) Install Trillions [https://trilinos.org/] 
+  
 
   4) Install hdf5 [https://www.hdfgroup.org/HDF5/]
+  
 
   5) Install SuperLU [http://crd-legacy.lbl.gov/~xiaoye/SuperLU/]
+  
 
 2. Install openIGA lib
   1) Goes into “build” folder.

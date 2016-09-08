@@ -5,6 +5,7 @@ from the Computational Physics Group at the University of Michigan, adviser: Pro
 current lead developer: Zhenlin Wang
 
 List of contributors:
+
 Zhenlin Wang
 
 Shiva Rudraraju
@@ -39,6 +40,7 @@ This code has been developed under the support of the following:
 Installation with cmake:
 =======================================================================
 1. Install pre-required libs:
+
   1) Install CMake [http://www.cmake.org/download/]
 
   2) Install deal.II (version 8.4.1 recommended) with Trilinos [www.dealii.org/download.html]
@@ -47,16 +49,23 @@ Installation with cmake:
   3) Install Trillions [https://trilinos.org/] 
 
   4) Install hdf5 [https://www.hdfgroup.org/HDF5/]
-
+  
   5) Install SuperLU [http://crd-legacy.lbl.gov/~xiaoye/SuperLU/]
+  
 
 2. Install openIGA lib
   1) Goes into “build” folder.
+
   2) Modify CMakeList.txt for path of pre-required libs: deal.ii (with Trilinos), hdf5, SuperLU,
+  
   3) $ cmake CMakeLists
+  
   4) $ make install
+  
   5) $ make run
+  
      - test(optional) of installation which will run “main” in build folder.
+     
   6) “build” folder could be deleted after installation. 
 
 

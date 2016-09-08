@@ -39,15 +39,15 @@ This code has been developed under the support of the following:
 
 Installation with cmake:
 =======================================================================
-1. Install pre-required libs:
+1. Install pre-required libs:\\
 
-  1) Install CMake [http://www.cmake.org/download/]
+  1) Install CMake [http://www.cmake.org/download/]\\
 
   2) Install deal.II (version 8.4.1 recommended) with Trilinos [www.dealii.org/download.html]
      Deal.II OSX binaries include full packages of deal.ii with Trillions and other useful libs.
 
 
-  3) Install Trillions [https://trilinos.org/] 
+  3) Install Trillions [https://trilinos.org/] \\
   
 
   4) Install hdf5 [https://www.hdfgroup.org/HDF5/]

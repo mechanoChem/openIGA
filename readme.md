@@ -54,11 +54,12 @@ Installation with cmake:
   
 
 2. Install openIGA lib
+
   1) Goes into “build” folder.
 
   2) Modify CMakeList.txt for path of pre-required libs: deal.ii (with Trilinos), hdf5, SuperLU,
   
-  3) $ cmake CMakeLists
+  3) $ cmake CMakeLists.txt
   
   4) $ make install
   
@@ -73,5 +74,14 @@ Usage
 =======================================================================
 For usage of IGAlib, please see our specific applications:
 defectsElastiticy:https://github.com/mechanoChem/defectsElasticity
+
+
+Reference
+=======================================================================
+If you write a paer using results obtained with the help of this code,  please consider citing one or more of the following:
+
+1) Z, Wang, S. Rudraraju, K. Garikipati, “A three dimensional field formulation, and isogeometric solutions to point and line defects using Toupin's theory of gradient elasticity at finite strains”, Journal of the Mechanics and Physics of Solids, Vol. 94: 336-361, 2016, doi:10.1016/j.jmps.2016.03.028 [http://arxiv.org/abs/1405.3293]
+
+2) S. Rudraraju, A. Van der Ven, K. Garikipati, “Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains”, Computer Methods in Applied Mechanics and Engineering Vol 278: 705-728, 2014 [http://arxiv.org/abs/1404.0094]
 
 data:08/22/2016

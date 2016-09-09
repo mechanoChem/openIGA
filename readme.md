@@ -54,6 +54,7 @@ Installation with cmake:
   
 
 2. Install openIGA lib
+
   1) Goes into “build” folder.
 
   2) Modify CMakeList.txt for path of pre-required libs: deal.ii (with Trilinos), hdf5, SuperLU,

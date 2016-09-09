@@ -73,7 +73,7 @@ Installation with cmake:
 Usage
 =======================================================================
 For usage of IGAlib, please see our specific applications:
-defectsElastiticy: https://github.com/mechanoChem/defectsElasticity
+defectsElastiticy:https://github.com/mechanoChem/defectsElasticity
 
 
 Reference

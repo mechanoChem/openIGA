@@ -13,7 +13,7 @@ Shiva Rudraraju
 
 Overview
 =======================================================================
-openIGA is a an isogeometric analysis based lib. It provides Nonuniform Rational B-Splines (NURBS) basis functions with generic finite element method commands for solving partial differential equations. Tt uses the automatic differentiation capabilities of the Sacado package from the Trilino library [https://trilinos.org/packages/sacado/], and it used deal.ii[www.dealii.org/download.html] for threads management. Currently the code is multi-threaded.
+openIGA is a an isogeometric analysis based lib. It provides Nonuniform Rational B-Splines (NURBS) basis functions with generic finite element method commands for solving partial differential equations. It uses the automatic differentiation capabilities of the Sacado package from the Trilino library [https://trilinos.org/packages/sacado/], and it used deal.ii[www.dealii.org/download.html] for threads management. Currently the code is multi-threaded.
 
 
 Version information

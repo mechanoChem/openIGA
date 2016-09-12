@@ -80,7 +80,7 @@ Reference
 =======================================================================
 If you write a paer using results obtained with the help of this code,  please consider citing one or more of the following:
 
-1) Z, Wang, S. Rudraraju, K. Garikipati, “A three dimensional field formulation, and isogeometric solutions to point and line defects using Toupin's theory of gradient elasticity at finite strains”, Journal of the Mechanics and Physics of Solids, Vol. 94: 336-361, 2016, doi:10.1016/j.jmps.2016.03.028 [http://arxiv.org/abs/1405.3293]
+1) Z, Wang, S. Rudraraju, K. Garikipati, “A three dimensional field formulation, and isogeometric solutions to point and line defects using Toupin's theory of gradient elasticity at finite strains”, Journal of the Mechanics and Physics of Solids, Vol. 94: 336-361, 2016, doi:10.1016/j.jmps.2016.03.028 [http://arxiv.org/abs/1508.07035]
 
 2) S. Rudraraju, A. Van der Ven, K. Garikipati, “Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains”, Computer Methods in Applied Mechanics and Engineering Vol 278: 705-728, 2014 [http://arxiv.org/abs/1404.0094]
 

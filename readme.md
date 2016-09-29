@@ -2,13 +2,16 @@ openIGA code: openIGA provides NURBS wraped in Generic FEM commands
 
 from the Computational Physics Group at the University of Michigan, adviser: Prof. Krishna Garikipati
 
-current lead developer: Zhenlin Wang
 
 List of contributors:
 
-Zhenlin Wang
+Zhenlin Wang (Lead Developer)
 
 Shiva Rudraraju
+
+Krishna Garikipati
+
+<B>Code documentation:</B> goo.gl/IEv7V1 <br>
 
 
 Overview

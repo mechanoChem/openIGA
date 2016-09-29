@@ -175,7 +175,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>model constructor and destructor </p>
+<p>model constructor </p>
 
 </div>
 </div>
@@ -191,6 +191,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>model destructor </p>
 
 </div>
 </div>
@@ -230,7 +231,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Evaluate functions using quadrature points (first three dof e.g. displacements) interpolation Include scalar/vector functions and its first and second derivatives </p>
+<p>Evaluate scalar functions using quadrature points (first three dof e.g. displacements) interpolation </p>
 
 </div>
 </div>
@@ -281,6 +282,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Evaluate scalar functions gradient using quadrature points (first three dof e.g. displacements) interpolation gradientInCurrentConfiguration is to be actived when evaluate gradient at current configuration </p>
 
 </div>
 </div>
@@ -372,6 +374,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Evaluate vector functions using quadrature points (first three dof e.g. displacements) interpolation </p>
 
 </div>
 </div>
@@ -410,6 +413,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Evaluate vector functions gradient using quadrature points (first three dof e.g. displacements) interpolation </p>
 
 </div>
 </div>
@@ -448,6 +452,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Evaluate vector functions second gradient using quadrature points (first three dof e.g. displacements) interpolation </p>
 
 </div>
 </div>
@@ -502,7 +507,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>return freeEnergy and gradient energy, integration over element </p>
+<p>return freeEnergy integration over element </p>
 
 </div>
 </div>
@@ -518,6 +523,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return gradient energy integration over element </p>
 
 </div>
 </div>
@@ -747,6 +753,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>material parameters C is parameter for weakly enforces the higher-order Dirichlet boundary condition using a penalty-based approach deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" </p>
 
 </div>
 </div>
@@ -785,7 +793,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>freeEnergy and gradient energy, integration over element </p>
+<p>freeEnergy integration over element </p>
 
 </div>
 </div>
@@ -798,6 +806,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>material parameters gamma is parameter for weakly enforces the higher-order Dirichlet boundary condition using a penalty-based approach deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" </p>
 
 </div>
 </div>
@@ -810,6 +820,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>he=1.0/NumKnotInterval; </p>
 
 </div>
 </div>
@@ -822,6 +833,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>gradient energy integration over element </p>
 
 </div>
 </div>
@@ -847,6 +859,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>material parameters l is gradient length scale deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" </p>
 
 </div>
 </div>
@@ -859,7 +873,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>material parameters muSG:mu for strain gradient term(beta) usually is same with mu l is gradient length scale gamma and C are parameters for weakly enforces the higher-order Dirichlet boundary condition using a penalty-based approach deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+<p>material parameters</p>
+<p>deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
 title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" </p>
 
 </div>
@@ -886,6 +901,8 @@ title: Three dimensional iso-geometric solutions to general boundary value probl
         </tr>
       </table>
 </div><div class="memdoc">
+<p>material parameters elasticity constant deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" </p>
 
 </div>
 </div>
@@ -898,6 +915,8 @@ title: Three dimensional iso-geometric solutions to general boundary value probl
         </tr>
       </table>
 </div><div class="memdoc">
+<p>material parameters muSG:mu for strain gradient term(beta) usually is same with mu deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" </p>
 
 </div>
 </div>
@@ -910,7 +929,7 @@ title: Three dimensional iso-geometric solutions to general boundary value probl
         </tr>
       </table>
 </div><div class="memdoc">
-<p>NumKnotInterval:number of knot interval used in weakly applying higher order boundary condition he=1.0/NumKnotInterval; </p>
+<p>NumKnotInterval:number of knot interval used in weakly applying higher order boundary condition </p>
 
 </div>
 </div>

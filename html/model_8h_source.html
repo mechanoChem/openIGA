@@ -125,151 +125,215 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment"></span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    *model constructor and destructor</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    *model constructor</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">    */</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classmodel.html">model</a> ();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  ~<a class="code" href="classmodel.html">model</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    *re-initialize parameter class</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> reinit(<a class="code" href="classparameters_class.html">parametersClass</a>&amp; _params);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    *main entrance to call all individual &quot;residual&quot; functions</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">    *user may overwrite it</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> getResidual(<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a>&amp; cell, <a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, dealii::Table&lt;1, T &gt;&amp; R,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> currentIteration);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    *residual for regular stress and high order stress</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> residualForMechanics(<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a>&amp; cell, <a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, dealii::Table&lt;1, T &gt;&amp; R);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">    *residual for neumman boundary condition</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    *user should overwrite it</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> residualForNeummanBC(<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a>&amp; cell, <a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, dealii::Table&lt;1, T &gt;&amp; R);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    *residual for high order boundary condition</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    *User may use it directly though it is virtual</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> residualForHighOrderBC(<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a>&amp; cell, <a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, dealii::Table&lt;1, T &gt;&amp; R);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    *Evaluate deformation gradient at given quadrature points</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    *Calculate Piola- kirchho stress and higher order stress Beta</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> evaluateStress(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, dealii::Table&lt;3, T&gt;&amp; P, dealii::Table&lt;4, T&gt;&amp; Beta,<span class="keywordtype">int</span> faceID=-1);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">    *Evaluate gradient of deformation tensor</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    *Evaluate determinate and inverse of deformation tensor</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> getDeformationMapWithGradient(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, <a class="code" href="structdeformation_mapwith_grad.html">deformationMapwithGrad&lt;T, dim&gt;</a>&amp; defMap, <span class="keywordtype">int</span> faceID=-1);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">    *Evaluate functions using quadrature points (first three dof e.g. displacements) interpolation</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">    *Include scalar/vector functions and its first and second derivatives </span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> evaluateScalarFunction(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T&gt;&amp; ULocal, dealii::Table&lt;1, T&gt;&amp; U,  <span class="keywordtype">int</span> faceID =-1);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> evaluateScalarFunctionGradient(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T&gt;&amp; ULocal, dealii::Table&lt;2, T&gt;&amp; gradU, <a class="code" href="structdeformation_map.html">deformationMap&lt;T, dim&gt;</a>&amp; defMap, <span class="keywordtype">bool</span> gradientInCurrentConfiguration, <span class="keywordtype">int</span> faceID =-1);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> evaluateVectorFunction(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T&gt;&amp; ULocal, dealii::Table&lt;2, T&gt;&amp; U,  <span class="keywordtype">int</span> faceID =-1);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> evaluateVectorFunctionGradient(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T&gt;&amp; ULocal, dealii::Table&lt;3, T&gt;&amp; GradU, <span class="keywordtype">int</span> faceID =-1);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> evaluateVectorFunctionSecondGradient(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T&gt;&amp; ULocal, dealii::Table&lt;4, T&gt;&amp; GradGradU, <span class="keywordtype">int</span> faceID =-1);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">    *return freeEnergy and gradient energy, integration over element</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    *model destructor</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  ~<a class="code" href="classmodel.html">model</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    *re-initialize parameter class</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> reinit(<a class="code" href="classparameters_class.html">parametersClass</a>&amp; _params);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    *main entrance to call all individual &quot;residual&quot; functions</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">    *user may overwrite it</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> getResidual(<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a>&amp; cell, <a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, dealii::Table&lt;1, T &gt;&amp; R,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> currentIteration);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    *residual for regular stress and high order stress</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> residualForMechanics(<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a>&amp; cell, <a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, dealii::Table&lt;1, T &gt;&amp; R);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    *residual for neumman boundary condition</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    *user should overwrite it</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> residualForNeummanBC(<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a>&amp; cell, <a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, dealii::Table&lt;1, T &gt;&amp; R);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">    *residual for high order boundary condition</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    *User may use it directly though it is virtual</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> residualForHighOrderBC(<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a>&amp; cell, <a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, dealii::Table&lt;1, T &gt;&amp; R);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">    *Evaluate deformation gradient at given quadrature points</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">    *Calculate Piola- kirchho stress and higher order stress Beta</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> evaluateStress(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, dealii::Table&lt;3, T&gt;&amp; P, dealii::Table&lt;4, T&gt;&amp; Beta,<span class="keywordtype">int</span> faceID=-1);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">    *Evaluate gradient of deformation tensor</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">    *Evaluate determinate and inverse of deformation tensor</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> getDeformationMapWithGradient(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T &gt;&amp; ULocal, <a class="code" href="structdeformation_mapwith_grad.html">deformationMapwithGrad&lt;T, dim&gt;</a>&amp; defMap, <span class="keywordtype">int</span> faceID=-1);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">    *Evaluate scalar functions using quadrature points (first three dof e.g. displacements) interpolation</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> evaluateScalarFunction(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T&gt;&amp; ULocal, dealii::Table&lt;1, T&gt;&amp; U,  <span class="keywordtype">int</span> faceID =-1);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">    *Evaluate scalar functions gradient using quadrature points (first three dof e.g. displacements) interpolation </span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">    *gradientInCurrentConfiguration is to be actived when evaluate gradient at current configuration</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">double</span> getFreeEnergy();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">double</span> getGradientFreeEnergy();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">    *pointer to material paramters</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classmodel.html#ae1c0153d7b5edc9579a14fc7ea9ff7f7">  102</a></span>&#160;    <a class="code" href="classparameters_class.html">parametersClass</a>* <a class="code" href="classmodel.html#ae1c0153d7b5edc9579a14fc7ea9ff7f7">params</a>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">    *current dof of residual</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">    *DOF=0 (default) for evaluating residual of mechanical term  </span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classmodel.html#aa251ebc6c3e308de09e369358bbeb658">  108</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classmodel.html#aa251ebc6c3e308de09e369358bbeb658">DOF</a>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">    *finite strain=true, using finite strain elasticity</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classmodel.html#acc1bd40e5ee90dba7ad7b1f2c44bc3c6">  113</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classmodel.html#acc1bd40e5ee90dba7ad7b1f2c44bc3c6">finiteStrain</a>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">    *current iteration</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classmodel.html#a3e7281ce4c066f36b6e124341d46fa97">  118</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classmodel.html#a3e7281ce4c066f36b6e124341d46fa97">iteration</a>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">    *freeEnergy and gradient energy, integration over element</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classmodel.html#aeb41a1777cde3269b434733b555eabe9">  123</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classmodel.html#aeb41a1777cde3269b434733b555eabe9">freeEnergy</a>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classmodel.html#a38704ef0de393007d6da45a3ddee89c2">  124</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a38704ef0de393007d6da45a3ddee89c2">interfaceEnergy</a>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">    *material parameters</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">    *muSG:mu for strain gradient term(beta) usually is same with mu</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">    *l is gradient length scale</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">    *gamma and C are parameters for weakly enforces the higher-order Dirichlet boundary condition using a penalty-based approach</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">    *deatials explanations of these parameters can be found at &quot;Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">    *title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin&#39;s theory of gradient elasticity at finite strains&quot; </span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classmodel.html#a3db359547eed8cfd48ca821d95f577af">  134</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classmodel.html#a74577585cf12d1712ab9c57616d49205">  135</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a74577585cf12d1712ab9c57616d49205">mu</a>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classmodel.html#a0b8f22e000e43ce18d3a55d9b81abb81">  136</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a0b8f22e000e43ce18d3a55d9b81abb81">muSG</a>;</div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classmodel.html#a59e80b8ba32c12c6d0a868f17a19ae48">  137</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a59e80b8ba32c12c6d0a868f17a19ae48">l</a>;</div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classmodel.html#a72f9e01745b3a8203067ab84aefc9aea">  138</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a72f9e01745b3a8203067ab84aefc9aea">gamma</a>;</div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classmodel.html#a8987032f6f7d7cfaa0ff4e2a62ae08fe">  139</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a8987032f6f7d7cfaa0ff4e2a62ae08fe">C</a>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">    *NumKnotInterval:number of knot interval used in weakly applying higher order boundary condition</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">    *he=1.0/NumKnotInterval;</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classmodel.html#ae77a0989b6c5341b26355eb555e61503">  145</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classmodel.html#ae77a0989b6c5341b26355eb555e61503">NumKnotInterval</a>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classmodel.html#a1d8f95203b021600bdd1f27fd508e8e9">  146</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a1d8f95203b021600bdd1f27fd508e8e9">he</a>;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">    *may only used for example (redundant)</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">    */</span> </div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classmodel.html#a8a23f389715acfc88ae4000ab00600f0">  151</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a8a23f389715acfc88ae4000ab00600f0">load</a>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">    *type of boundary condition</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">    */</span> </div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classmodel.html#ab59b84599509eac74a94e7dbdde1a0f3">  156</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classmodel.html#ab59b84599509eac74a94e7dbdde1a0f3">bcType</a>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;};</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classmodel_html_a8a23f389715acfc88ae4000ab00600f0"><div class="ttname"><a href="classmodel.html#a8a23f389715acfc88ae4000ab00600f0">model::load</a></div><div class="ttdeci">double load</div><div class="ttdef"><b>Definition:</b> model.h:151</div></div>
-<div class="ttc" id="classmodel_html_ab59b84599509eac74a94e7dbdde1a0f3"><div class="ttname"><a href="classmodel.html#ab59b84599509eac74a94e7dbdde1a0f3">model::bcType</a></div><div class="ttdeci">const char * bcType</div><div class="ttdef"><b>Definition:</b> model.h:156</div></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> evaluateScalarFunctionGradient(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T&gt;&amp; ULocal, dealii::Table&lt;2, T&gt;&amp; gradU, <a class="code" href="structdeformation_map.html">deformationMap&lt;T, dim&gt;</a>&amp; defMap, <span class="keywordtype">bool</span> gradientInCurrentConfiguration, <span class="keywordtype">int</span> faceID =-1);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">    *Evaluate vector functions using quadrature points (first three dof e.g. displacements) interpolation</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> evaluateVectorFunction(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T&gt;&amp; ULocal, dealii::Table&lt;2, T&gt;&amp; U,  <span class="keywordtype">int</span> faceID =-1);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">    *Evaluate vector functions gradient using quadrature points (first three dof e.g. displacements) interpolation</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">    */</span> </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> evaluateVectorFunctionGradient(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T&gt;&amp; ULocal, dealii::Table&lt;3, T&gt;&amp; GradU, <span class="keywordtype">int</span> faceID =-1);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">    *Evaluate vector functions second gradient using quadrature points (first three dof e.g. displacements) interpolation</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">    */</span> </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> evaluateVectorFunctionSecondGradient(<a class="code" href="class_i_g_a_values.html">IGAValues&lt;dim&gt;</a>&amp; fe_values, dealii::Table&lt;1, T&gt;&amp; ULocal, dealii::Table&lt;4, T&gt;&amp; GradGradU, <span class="keywordtype">int</span> faceID =-1);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">    *return freeEnergy integration over element</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">double</span> getFreeEnergy();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">    *return gradient energy integration over element</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">double</span> getGradientFreeEnergy();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">    *pointer to material paramters</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classmodel.html#ae1c0153d7b5edc9579a14fc7ea9ff7f7">  126</a></span>&#160;    <a class="code" href="classparameters_class.html">parametersClass</a>* <a class="code" href="classmodel.html#ae1c0153d7b5edc9579a14fc7ea9ff7f7">params</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">    *current dof of residual</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">    *DOF=0 (default) for evaluating residual of mechanical term  </span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classmodel.html#aa251ebc6c3e308de09e369358bbeb658">  132</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classmodel.html#aa251ebc6c3e308de09e369358bbeb658">DOF</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">    *finite strain=true, using finite strain elasticity</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classmodel.html#acc1bd40e5ee90dba7ad7b1f2c44bc3c6">  137</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classmodel.html#acc1bd40e5ee90dba7ad7b1f2c44bc3c6">finiteStrain</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">    *current iteration</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classmodel.html#a3e7281ce4c066f36b6e124341d46fa97">  142</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classmodel.html#a3e7281ce4c066f36b6e124341d46fa97">iteration</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">    *freeEnergy integration over element</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classmodel.html#aeb41a1777cde3269b434733b555eabe9">  147</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classmodel.html#aeb41a1777cde3269b434733b555eabe9">freeEnergy</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">    *gradient energy integration over element</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classmodel.html#a38704ef0de393007d6da45a3ddee89c2">  152</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a38704ef0de393007d6da45a3ddee89c2">interfaceEnergy</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">    *material parameters</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">    *deatials explanations of these parameters can be found at &quot;Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">    *title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin&#39;s theory of gradient elasticity at finite strains&quot; </span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classmodel.html#a3db359547eed8cfd48ca821d95f577af">  160</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">    *material parameters</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">    *elasticity constant</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">    *deatials explanations of these parameters can be found at &quot;Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">    *title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin&#39;s theory of gradient elasticity at finite strains&quot; </span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classmodel.html#a74577585cf12d1712ab9c57616d49205">  168</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a74577585cf12d1712ab9c57616d49205">mu</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">    *material parameters</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">    *muSG:mu for strain gradient term(beta) usually is same with mu</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">    *deatials explanations of these parameters can be found at &quot;Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">    *title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin&#39;s theory of gradient elasticity at finite strains&quot; </span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classmodel.html#a0b8f22e000e43ce18d3a55d9b81abb81">  176</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a0b8f22e000e43ce18d3a55d9b81abb81">muSG</a>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">    *material parameters</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">    *l is gradient length scale</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">    *deatials explanations of these parameters can be found at &quot;Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">    *title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin&#39;s theory of gradient elasticity at finite strains&quot; </span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classmodel.html#a59e80b8ba32c12c6d0a868f17a19ae48">  184</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a59e80b8ba32c12c6d0a868f17a19ae48">l</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">    *material parameters</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">    *gamma is parameter for weakly enforces the higher-order Dirichlet boundary condition using a penalty-based approach</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">    *deatials explanations of these parameters can be found at &quot;Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">    *title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin&#39;s theory of gradient elasticity at finite strains&quot; </span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="classmodel.html#a72f9e01745b3a8203067ab84aefc9aea">  192</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a72f9e01745b3a8203067ab84aefc9aea">gamma</a>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">    *material parameters</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">    *C is parameter for weakly enforces the higher-order Dirichlet boundary condition using a penalty-based approach</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment">    *deatials explanations of these parameters can be found at &quot;Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment">    *title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin&#39;s theory of gradient elasticity at finite strains&quot; </span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classmodel.html#a8987032f6f7d7cfaa0ff4e2a62ae08fe">  200</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a8987032f6f7d7cfaa0ff4e2a62ae08fe">C</a>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">    *NumKnotInterval:number of knot interval used in weakly applying higher order boundary condition</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classmodel.html#ae77a0989b6c5341b26355eb555e61503">  205</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classmodel.html#ae77a0989b6c5341b26355eb555e61503">NumKnotInterval</a>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment">    *he=1.0/NumKnotInterval;</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="classmodel.html#a1d8f95203b021600bdd1f27fd508e8e9">  210</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a1d8f95203b021600bdd1f27fd508e8e9">he</a>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment">    *may only used for example (redundant)</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">    */</span> </div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classmodel.html#a8a23f389715acfc88ae4000ab00600f0">  215</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmodel.html#a8a23f389715acfc88ae4000ab00600f0">load</a>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">    *type of boundary condition</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">    */</span> </div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classmodel.html#ab59b84599509eac74a94e7dbdde1a0f3">  220</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classmodel.html#ab59b84599509eac74a94e7dbdde1a0f3">bcType</a>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;};</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classmodel_html_a8a23f389715acfc88ae4000ab00600f0"><div class="ttname"><a href="classmodel.html#a8a23f389715acfc88ae4000ab00600f0">model::load</a></div><div class="ttdeci">double load</div><div class="ttdef"><b>Definition:</b> model.h:215</div></div>
+<div class="ttc" id="classmodel_html_ab59b84599509eac74a94e7dbdde1a0f3"><div class="ttname"><a href="classmodel.html#ab59b84599509eac74a94e7dbdde1a0f3">model::bcType</a></div><div class="ttdeci">const char * bcType</div><div class="ttdef"><b>Definition:</b> model.h:220</div></div>
 <div class="ttc" id="structdeformation_map_html"><div class="ttname"><a href="structdeformation_map.html">deformationMap</a></div><div class="ttdef"><b>Definition:</b> dataStruct.h:10</div></div>
-<div class="ttc" id="classmodel_html_ae77a0989b6c5341b26355eb555e61503"><div class="ttname"><a href="classmodel.html#ae77a0989b6c5341b26355eb555e61503">model::NumKnotInterval</a></div><div class="ttdeci">double NumKnotInterval</div><div class="ttdef"><b>Definition:</b> model.h:145</div></div>
-<div class="ttc" id="classmodel_html_a74577585cf12d1712ab9c57616d49205"><div class="ttname"><a href="classmodel.html#a74577585cf12d1712ab9c57616d49205">model::mu</a></div><div class="ttdeci">double mu</div><div class="ttdef"><b>Definition:</b> model.h:135</div></div>
-<div class="ttc" id="classmodel_html_a72f9e01745b3a8203067ab84aefc9aea"><div class="ttname"><a href="classmodel.html#a72f9e01745b3a8203067ab84aefc9aea">model::gamma</a></div><div class="ttdeci">double gamma</div><div class="ttdef"><b>Definition:</b> model.h:138</div></div>
+<div class="ttc" id="classmodel_html_ae77a0989b6c5341b26355eb555e61503"><div class="ttname"><a href="classmodel.html#ae77a0989b6c5341b26355eb555e61503">model::NumKnotInterval</a></div><div class="ttdeci">double NumKnotInterval</div><div class="ttdef"><b>Definition:</b> model.h:205</div></div>
+<div class="ttc" id="classmodel_html_a74577585cf12d1712ab9c57616d49205"><div class="ttname"><a href="classmodel.html#a74577585cf12d1712ab9c57616d49205">model::mu</a></div><div class="ttdeci">double mu</div><div class="ttdef"><b>Definition:</b> model.h:168</div></div>
+<div class="ttc" id="classmodel_html_a72f9e01745b3a8203067ab84aefc9aea"><div class="ttname"><a href="classmodel.html#a72f9e01745b3a8203067ab84aefc9aea">model::gamma</a></div><div class="ttdeci">double gamma</div><div class="ttdef"><b>Definition:</b> model.h:192</div></div>
 <div class="ttc" id="class_i_g_a_values_html"><div class="ttname"><a href="class_i_g_a_values.html">IGAValues</a></div><div class="ttdef"><b>Definition:</b> NURBSClass.h:39</div></div>
-<div class="ttc" id="classmodel_html_acc1bd40e5ee90dba7ad7b1f2c44bc3c6"><div class="ttname"><a href="classmodel.html#acc1bd40e5ee90dba7ad7b1f2c44bc3c6">model::finiteStrain</a></div><div class="ttdeci">bool finiteStrain</div><div class="ttdef"><b>Definition:</b> model.h:113</div></div>
-<div class="ttc" id="classmodel_html_aeb41a1777cde3269b434733b555eabe9"><div class="ttname"><a href="classmodel.html#aeb41a1777cde3269b434733b555eabe9">model::freeEnergy</a></div><div class="ttdeci">double freeEnergy</div><div class="ttdef"><b>Definition:</b> model.h:123</div></div>
-<div class="ttc" id="classmodel_html_a8987032f6f7d7cfaa0ff4e2a62ae08fe"><div class="ttname"><a href="classmodel.html#a8987032f6f7d7cfaa0ff4e2a62ae08fe">model::C</a></div><div class="ttdeci">double C</div><div class="ttdef"><b>Definition:</b> model.h:139</div></div>
-<div class="ttc" id="classmodel_html_aa251ebc6c3e308de09e369358bbeb658"><div class="ttname"><a href="classmodel.html#aa251ebc6c3e308de09e369358bbeb658">model::DOF</a></div><div class="ttdeci">unsigned int DOF</div><div class="ttdef"><b>Definition:</b> model.h:108</div></div>
-<div class="ttc" id="classmodel_html_a1d8f95203b021600bdd1f27fd508e8e9"><div class="ttname"><a href="classmodel.html#a1d8f95203b021600bdd1f27fd508e8e9">model::he</a></div><div class="ttdeci">double he</div><div class="ttdef"><b>Definition:</b> model.h:146</div></div>
+<div class="ttc" id="classmodel_html_acc1bd40e5ee90dba7ad7b1f2c44bc3c6"><div class="ttname"><a href="classmodel.html#acc1bd40e5ee90dba7ad7b1f2c44bc3c6">model::finiteStrain</a></div><div class="ttdeci">bool finiteStrain</div><div class="ttdef"><b>Definition:</b> model.h:137</div></div>
+<div class="ttc" id="classmodel_html_aeb41a1777cde3269b434733b555eabe9"><div class="ttname"><a href="classmodel.html#aeb41a1777cde3269b434733b555eabe9">model::freeEnergy</a></div><div class="ttdeci">double freeEnergy</div><div class="ttdef"><b>Definition:</b> model.h:147</div></div>
+<div class="ttc" id="classmodel_html_a8987032f6f7d7cfaa0ff4e2a62ae08fe"><div class="ttname"><a href="classmodel.html#a8987032f6f7d7cfaa0ff4e2a62ae08fe">model::C</a></div><div class="ttdeci">double C</div><div class="ttdef"><b>Definition:</b> model.h:200</div></div>
+<div class="ttc" id="classmodel_html_aa251ebc6c3e308de09e369358bbeb658"><div class="ttname"><a href="classmodel.html#aa251ebc6c3e308de09e369358bbeb658">model::DOF</a></div><div class="ttdeci">unsigned int DOF</div><div class="ttdef"><b>Definition:</b> model.h:132</div></div>
+<div class="ttc" id="classmodel_html_a1d8f95203b021600bdd1f27fd508e8e9"><div class="ttname"><a href="classmodel.html#a1d8f95203b021600bdd1f27fd508e8e9">model::he</a></div><div class="ttdeci">double he</div><div class="ttdef"><b>Definition:</b> model.h:210</div></div>
 <div class="ttc" id="structdeformation_mapwith_grad_html"><div class="ttname"><a href="structdeformation_mapwith_grad.html">deformationMapwithGrad</a></div><div class="ttdef"><b>Definition:</b> dataStruct.h:17</div></div>
 <div class="ttc" id="classparameters_class_html"><div class="ttname"><a href="classparameters_class.html">parametersClass</a></div><div class="ttdef"><b>Definition:</b> parameters.h:11</div></div>
-<div class="ttc" id="classknot_span_html"><div class="ttname"><a href="classknot_span.html">knotSpan</a></div><div class="ttdef"><b>Definition:</b> NURBSClass.h:178</div></div>
-<div class="ttc" id="classmodel_html_a3db359547eed8cfd48ca821d95f577af"><div class="ttname"><a href="classmodel.html#a3db359547eed8cfd48ca821d95f577af">model::lambda</a></div><div class="ttdeci">double lambda</div><div class="ttdef"><b>Definition:</b> model.h:134</div></div>
+<div class="ttc" id="classknot_span_html"><div class="ttname"><a href="classknot_span.html">knotSpan</a></div><div class="ttdef"><b>Definition:</b> NURBSClass.h:182</div></div>
+<div class="ttc" id="classmodel_html_a3db359547eed8cfd48ca821d95f577af"><div class="ttname"><a href="classmodel.html#a3db359547eed8cfd48ca821d95f577af">model::lambda</a></div><div class="ttdeci">double lambda</div><div class="ttdef"><b>Definition:</b> model.h:160</div></div>
 <div class="ttc" id="classmodel_html"><div class="ttname"><a href="classmodel.html">model</a></div><div class="ttdef"><b>Definition:</b> model.h:33</div></div>
-<div class="ttc" id="classmodel_html_ae1c0153d7b5edc9579a14fc7ea9ff7f7"><div class="ttname"><a href="classmodel.html#ae1c0153d7b5edc9579a14fc7ea9ff7f7">model::params</a></div><div class="ttdeci">parametersClass * params</div><div class="ttdef"><b>Definition:</b> model.h:102</div></div>
-<div class="ttc" id="classmodel_html_a38704ef0de393007d6da45a3ddee89c2"><div class="ttname"><a href="classmodel.html#a38704ef0de393007d6da45a3ddee89c2">model::interfaceEnergy</a></div><div class="ttdeci">double interfaceEnergy</div><div class="ttdef"><b>Definition:</b> model.h:124</div></div>
-<div class="ttc" id="classmodel_html_a0b8f22e000e43ce18d3a55d9b81abb81"><div class="ttname"><a href="classmodel.html#a0b8f22e000e43ce18d3a55d9b81abb81">model::muSG</a></div><div class="ttdeci">double muSG</div><div class="ttdef"><b>Definition:</b> model.h:136</div></div>
-<div class="ttc" id="classmodel_html_a3e7281ce4c066f36b6e124341d46fa97"><div class="ttname"><a href="classmodel.html#a3e7281ce4c066f36b6e124341d46fa97">model::iteration</a></div><div class="ttdeci">unsigned int iteration</div><div class="ttdef"><b>Definition:</b> model.h:118</div></div>
-<div class="ttc" id="classmodel_html_a59e80b8ba32c12c6d0a868f17a19ae48"><div class="ttname"><a href="classmodel.html#a59e80b8ba32c12c6d0a868f17a19ae48">model::l</a></div><div class="ttdeci">double l</div><div class="ttdef"><b>Definition:</b> model.h:137</div></div>
+<div class="ttc" id="classmodel_html_ae1c0153d7b5edc9579a14fc7ea9ff7f7"><div class="ttname"><a href="classmodel.html#ae1c0153d7b5edc9579a14fc7ea9ff7f7">model::params</a></div><div class="ttdeci">parametersClass * params</div><div class="ttdef"><b>Definition:</b> model.h:126</div></div>
+<div class="ttc" id="classmodel_html_a38704ef0de393007d6da45a3ddee89c2"><div class="ttname"><a href="classmodel.html#a38704ef0de393007d6da45a3ddee89c2">model::interfaceEnergy</a></div><div class="ttdeci">double interfaceEnergy</div><div class="ttdef"><b>Definition:</b> model.h:152</div></div>
+<div class="ttc" id="classmodel_html_a0b8f22e000e43ce18d3a55d9b81abb81"><div class="ttname"><a href="classmodel.html#a0b8f22e000e43ce18d3a55d9b81abb81">model::muSG</a></div><div class="ttdeci">double muSG</div><div class="ttdef"><b>Definition:</b> model.h:176</div></div>
+<div class="ttc" id="classmodel_html_a3e7281ce4c066f36b6e124341d46fa97"><div class="ttname"><a href="classmodel.html#a3e7281ce4c066f36b6e124341d46fa97">model::iteration</a></div><div class="ttdeci">unsigned int iteration</div><div class="ttdef"><b>Definition:</b> model.h:142</div></div>
+<div class="ttc" id="classmodel_html_a59e80b8ba32c12c6d0a868f17a19ae48"><div class="ttname"><a href="classmodel.html#a59e80b8ba32c12c6d0a868f17a19ae48">model::l</a></div><div class="ttdeci">double l</div><div class="ttdef"><b>Definition:</b> model.h:184</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

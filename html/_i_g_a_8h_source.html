@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IGA.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_i_g_a_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/***</span></div>
+<a href="_i_g_a_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*IGA.h declares class IGA </span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*class IGA provides generic commands of FEM at domain level with support of IGAValues and NURBSMesh</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*default setting only solve a simple boundary value problem for debugging</span></div>
@@ -116,150 +116,191 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:<span class="comment"></span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    *IGA constructor and destructor</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    *IGA constructor</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    *IGA class need NURBS mesh and parameter class as input</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    */</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="class_i_g_a.html">IGA</a> (<a class="code" href="class_n_u_r_b_s_mesh.html">NURBSMesh&lt;dim&gt;</a>&amp; _mesh, <a class="code" href="classparameters_class.html">parametersClass</a>&amp; _params);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  ~<a class="code" href="class_i_g_a.html">IGA</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    *Mark six boundary surfaces</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">void</span> mark_boundaries();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">    *Initialize system_rhs, U, Un, dU and system_matrix</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> setup();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    *cellValue for another way to set fe_values</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    *No longer use now, replaced by IGAValues.reinit(*cell)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> setupCellValues();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">    *Adjust right hand side and Jacobian (system_matrix) to apply dirrchelt BC in solving system</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> condenseKandRHS();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    *Solve linear system equation</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    *direct solver:superLU</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> solve();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    *top entrance of IGA class </span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    *user may overwrite it to initialize their physics based model here</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> run();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">    *apply dirichlet boundary condition</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">    *user may overwrite it</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> apply_boundary_conditions();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">    *user may overwrite it to apply initial conditions</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> apply_initial_values();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">    *Fill output vector and output vtk file</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    *user can use it directly</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> output (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _cycle);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">    *Initialization (set system_matrix=0.0; system_rhs=0.0; dU=0.0) before assemble_system_interval</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">    *Set multiple threads</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">void</span> assemble_system ();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">    *for user to assemble system</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">    *need to overwrite it that uses physics based model model to call getesidual</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> assemble_system_interval (<span class="keyword">const</span> <span class="keyword">typename</span> std::vector&lt;<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a> &gt;::iterator &amp;begin, <span class="keyword">const</span> <span class="keyword">typename</span> std::vector&lt;<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a> &gt;::iterator &amp;end);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">    *pointer to NURBSMesh and model</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">    *reference of paramtersClass</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_i_g_a.html#acb057dab390e5fcc1535821be9eef3b5">  101</a></span>&#160;  <a class="code" href="class_n_u_r_b_s_mesh.html">NURBSMesh&lt;dim&gt;</a>* <a class="code" href="class_i_g_a.html#acb057dab390e5fcc1535821be9eef3b5">mesh</a>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a14b2772c0245fd44a86d87dc03b65571">  102</a></span>&#160;  <a class="code" href="classparameters_class.html">parametersClass</a>&amp; <a class="code" href="class_i_g_a.html#a14b2772c0245fd44a86d87dc03b65571">params</a>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a6ff7412a866118a5c3a5393eaf606578">  103</a></span>&#160;  <a class="code" href="classmodel.html">model&lt;Sacado::Fad::DFad&lt;double&gt;</a>,dim&gt;* <a class="code" href="class_i_g_a.html#a6ff7412a866118a5c3a5393eaf606578">modelexample</a>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">    *storage IGAValues for each cell (element)</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">    *no need to use it now, replaced by IGAValues.reinit(*cell)</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a34bbc3c59908d252d3301a62f23a3b1d">  109</a></span>&#160;  std::vector&lt;IGAValues&lt;dim&gt;*&gt; <a class="code" href="class_i_g_a.html#a34bbc3c59908d252d3301a62f23a3b1d">cellValues</a>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">    * define sparsity pattern for sparse matrix</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">    *system_matrix:jacobian materix</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    *IGA destructor</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  ~<a class="code" href="class_i_g_a.html">IGA</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    *Mark six boundary surfaces</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> mark_boundaries();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    *Initialize system_rhs, U, Un, dU and system_matrix</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> setup();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">    *cellValue for another way to set fe_values</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    *No longer use now, replaced by IGAValues.reinit(*cell)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> setupCellValues();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    *Adjust right hand side and Jacobian (system_matrix) to apply dirrchelt BC in solving system</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> condenseKandRHS();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    *Solve linear system equation</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    *direct solver:superLU</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> solve();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    *top entrance of IGA class </span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    *user may overwrite it to initialize their physics based model here</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> run();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    *apply dirichlet boundary condition</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">    *user may overwrite it</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> apply_boundary_conditions();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    *user may overwrite it to apply initial conditions</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> apply_initial_values();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">    *Fill output vector and output vtk file</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">    *user can use it directly</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> output (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _cycle);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">    *Initialization (set system_matrix=0.0; system_rhs=0.0; dU=0.0) before assemble_system_interval</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">    *Set multiple threads</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordtype">void</span> assemble_system ();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">    *for user to assemble system</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">    *need to overwrite it that uses physics based model model to call getesidual</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> assemble_system_interval (<span class="keyword">const</span> <span class="keyword">typename</span> std::vector&lt;<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a> &gt;::iterator &amp;begin, <span class="keyword">const</span> <span class="keyword">typename</span> std::vector&lt;<a class="code" href="classknot_span.html">knotSpan&lt;dim&gt;</a> &gt;::iterator &amp;end);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">    *pointer to NURBSMesh</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">    *reference of paramtersClass</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_i_g_a.html#acb057dab390e5fcc1535821be9eef3b5">  105</a></span>&#160;  <a class="code" href="class_n_u_r_b_s_mesh.html">NURBSMesh&lt;dim&gt;</a>* <a class="code" href="class_i_g_a.html#acb057dab390e5fcc1535821be9eef3b5">mesh</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">    *reference of paramtersClass</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a14b2772c0245fd44a86d87dc03b65571">  110</a></span>&#160;  <a class="code" href="classparameters_class.html">parametersClass</a>&amp; <a class="code" href="class_i_g_a.html#a14b2772c0245fd44a86d87dc03b65571">params</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">    *pointer to model</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_i_g_a.html#af03fb88b0330044ffa586bdceb0649cc">  115</a></span>&#160;  <a class="code" href="classsparsity_pattern.html">sparsityPattern</a> <a class="code" href="class_i_g_a.html#af03fb88b0330044ffa586bdceb0649cc">sparsity_pattern</a>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a043f792f8334477a2989335a2f4ba617">  116</a></span>&#160;  <a class="code" href="classsparse_matrix.html">sparseMatrix</a> <a class="code" href="class_i_g_a.html#a043f792f8334477a2989335a2f4ba617">system_matrix</a>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">    *system_rhs:right hand side of linear system </span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">    *U: current solution; Un: solution of previous step iteration; </span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">    *dU:step change of during iteration used in Newton method</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a04565b2cc3055b2bf27fde89b576a8b9">  123</a></span>&#160;  <a class="code" href="classdense_vector.html">denseVector</a>  system_rhs, U, <a class="code" href="class_i_g_a.html#a04565b2cc3055b2bf27fde89b576a8b9">Un</a>, dU;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">    *dirichletMap: for applying diirclet boundary condition</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a1e07c5269190ff30a727c8a315ca7138">  128</a></span>&#160;  std::map&lt;unsigned int, double&gt; <a class="code" href="class_i_g_a.html#a1e07c5269190ff30a727c8a315ca7138">dirichletMap</a>;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">  *output sequence for output</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a40a9aae9d341b0e501011653456d84e4">  133</a></span>&#160;  std::vector&lt;solutionClass&lt;dim&gt;* &gt; <a class="code" href="class_i_g_a.html#a40a9aae9d341b0e501011653456d84e4">outputVariables</a>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">    *for loading step by step, numIncrements can be specified NOTE: function run need to overwrite it accordingly</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">    *currentIncrement: current increment of loading</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">    *currentIteration:current time step in iteration algorithm </span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a2c04b39114bf641c896e6dc2347219c4">  140</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_i_g_a.html#a2c04b39114bf641c896e6dc2347219c4">numIncrements</a>, currentIncrement, currentIteration;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">    *using deal.iii threads manager</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_i_g_a.html#abdeea3478d8f3c0d40d369174eae62e4">  145</a></span>&#160;  dealii::Threads::Mutex     <a class="code" href="class_i_g_a.html#abdeea3478d8f3c0d40d369174eae62e4">assembler_lock</a>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;};</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_i_g_a_html_acb057dab390e5fcc1535821be9eef3b5"><div class="ttname"><a href="class_i_g_a.html#acb057dab390e5fcc1535821be9eef3b5">IGA::mesh</a></div><div class="ttdeci">NURBSMesh&lt; dim &gt; * mesh</div><div class="ttdef"><b>Definition:</b> IGA.h:101</div></div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a6ff7412a866118a5c3a5393eaf606578">  115</a></span>&#160;  <a class="code" href="classmodel.html">model&lt;Sacado::Fad::DFad&lt;double&gt;</a>,dim&gt;* <a class="code" href="class_i_g_a.html#a6ff7412a866118a5c3a5393eaf606578">modelexample</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">    *storage IGAValues for each cell (element)</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">    *no need to use it now, replaced by IGAValues.reinit(*cell)</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a34bbc3c59908d252d3301a62f23a3b1d">  121</a></span>&#160;  std::vector&lt;IGAValues&lt;dim&gt;*&gt; <a class="code" href="class_i_g_a.html#a34bbc3c59908d252d3301a62f23a3b1d">cellValues</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">    * define sparsity pattern for sparse matrix</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_i_g_a.html#af03fb88b0330044ffa586bdceb0649cc">  126</a></span>&#160;  <a class="code" href="classsparsity_pattern.html">sparsityPattern</a> <a class="code" href="class_i_g_a.html#af03fb88b0330044ffa586bdceb0649cc">sparsity_pattern</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">    *system_matrix:jacobian materix</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a043f792f8334477a2989335a2f4ba617">  131</a></span>&#160;  <a class="code" href="classsparse_matrix.html">sparseMatrix</a> <a class="code" href="class_i_g_a.html#a043f792f8334477a2989335a2f4ba617">system_matrix</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">    *system_rhs:right hand side of linear system </span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="class_i_g_a.html#aaa3e571ef2d31435753cc7ff7e2ff92d">  136</a></span>&#160;  <a class="code" href="classdense_vector.html">denseVector</a>  <a class="code" href="class_i_g_a.html#aaa3e571ef2d31435753cc7ff7e2ff92d">system_rhs</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">    *U: current solution</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a10a37b45fda48f67f1f3fb7626048de5">  141</a></span>&#160;    <a class="code" href="classdense_vector.html">denseVector</a>  <a class="code" href="class_i_g_a.html#a10a37b45fda48f67f1f3fb7626048de5">U</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">    *Un: solution of previous step iteration; </span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a04565b2cc3055b2bf27fde89b576a8b9">  146</a></span>&#160;    <a class="code" href="classdense_vector.html">denseVector</a>  <a class="code" href="class_i_g_a.html#a04565b2cc3055b2bf27fde89b576a8b9">Un</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">    *dU:step change of during iteration used in Newton method</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a71c19944d92e3e095f1cb896928b3a4d">  151</a></span>&#160;    <a class="code" href="classdense_vector.html">denseVector</a>  <a class="code" href="class_i_g_a.html#a71c19944d92e3e095f1cb896928b3a4d">dU</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">    *dirichletMap: for applying diirclet boundary condition</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a1e07c5269190ff30a727c8a315ca7138">  156</a></span>&#160;  std::map&lt;unsigned int, double&gt; <a class="code" href="class_i_g_a.html#a1e07c5269190ff30a727c8a315ca7138">dirichletMap</a>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">  *output sequence for output</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a40a9aae9d341b0e501011653456d84e4">  161</a></span>&#160;  std::vector&lt;solutionClass&lt;dim&gt;* &gt; <a class="code" href="class_i_g_a.html#a40a9aae9d341b0e501011653456d84e4">outputVariables</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">    *for loading step by step, numIncrements can be specified NOTE: function run need to overwrite it accordingly</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a2c04b39114bf641c896e6dc2347219c4">  166</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_i_g_a.html#a2c04b39114bf641c896e6dc2347219c4">numIncrements</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">    *currentIncrement: current increment of loading</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_i_g_a.html#aca786276ce09ff562a6d9db37fc57936">  171</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_i_g_a.html#aca786276ce09ff562a6d9db37fc57936">currentIncrement</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">    *currentIteration:current time step in iteration algorithm </span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="class_i_g_a.html#a06231ba5613c2aa1f873f0591baae05d">  176</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_i_g_a.html#a06231ba5613c2aa1f873f0591baae05d">currentIteration</a>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">    *using deal.iii threads manager</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="class_i_g_a.html#abdeea3478d8f3c0d40d369174eae62e4">  181</a></span>&#160;  dealii::Threads::Mutex     <a class="code" href="class_i_g_a.html#abdeea3478d8f3c0d40d369174eae62e4">assembler_lock</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;};</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_i_g_a_html_acb057dab390e5fcc1535821be9eef3b5"><div class="ttname"><a href="class_i_g_a.html#acb057dab390e5fcc1535821be9eef3b5">IGA::mesh</a></div><div class="ttdeci">NURBSMesh&lt; dim &gt; * mesh</div><div class="ttdef"><b>Definition:</b> IGA.h:105</div></div>
+<div class="ttc" id="class_i_g_a_html_a71c19944d92e3e095f1cb896928b3a4d"><div class="ttname"><a href="class_i_g_a.html#a71c19944d92e3e095f1cb896928b3a4d">IGA::dU</a></div><div class="ttdeci">denseVector dU</div><div class="ttdef"><b>Definition:</b> IGA.h:151</div></div>
+<div class="ttc" id="class_i_g_a_html_aca786276ce09ff562a6d9db37fc57936"><div class="ttname"><a href="class_i_g_a.html#aca786276ce09ff562a6d9db37fc57936">IGA::currentIncrement</a></div><div class="ttdeci">unsigned int currentIncrement</div><div class="ttdef"><b>Definition:</b> IGA.h:171</div></div>
 <div class="ttc" id="model_8h_html"><div class="ttname"><a href="model_8h.html">model.h</a></div></div>
-<div class="ttc" id="class_i_g_a_html_a34bbc3c59908d252d3301a62f23a3b1d"><div class="ttname"><a href="class_i_g_a.html#a34bbc3c59908d252d3301a62f23a3b1d">IGA::cellValues</a></div><div class="ttdeci">std::vector&lt; IGAValues&lt; dim &gt; * &gt; cellValues</div><div class="ttdef"><b>Definition:</b> IGA.h:109</div></div>
+<div class="ttc" id="class_i_g_a_html_a34bbc3c59908d252d3301a62f23a3b1d"><div class="ttname"><a href="class_i_g_a.html#a34bbc3c59908d252d3301a62f23a3b1d">IGA::cellValues</a></div><div class="ttdeci">std::vector&lt; IGAValues&lt; dim &gt; * &gt; cellValues</div><div class="ttdef"><b>Definition:</b> IGA.h:121</div></div>
 <div class="ttc" id="headers__dealii_8h_html"><div class="ttname"><a href="headers__dealii_8h.html">headers_dealii.h</a></div></div>
-<div class="ttc" id="classdense_vector_html"><div class="ttname"><a href="classdense_vector.html">denseVector</a></div><div class="ttdef"><b>Definition:</b> sparsityDataClass.h:94</div></div>
-<div class="ttc" id="class_i_g_a_html_a043f792f8334477a2989335a2f4ba617"><div class="ttname"><a href="class_i_g_a.html#a043f792f8334477a2989335a2f4ba617">IGA::system_matrix</a></div><div class="ttdeci">sparseMatrix system_matrix</div><div class="ttdef"><b>Definition:</b> IGA.h:116</div></div>
-<div class="ttc" id="class_i_g_a_html_a40a9aae9d341b0e501011653456d84e4"><div class="ttname"><a href="class_i_g_a.html#a40a9aae9d341b0e501011653456d84e4">IGA::outputVariables</a></div><div class="ttdeci">std::vector&lt; solutionClass&lt; dim &gt; * &gt; outputVariables</div><div class="ttdef"><b>Definition:</b> IGA.h:133</div></div>
-<div class="ttc" id="class_i_g_a_html_af03fb88b0330044ffa586bdceb0649cc"><div class="ttname"><a href="class_i_g_a.html#af03fb88b0330044ffa586bdceb0649cc">IGA::sparsity_pattern</a></div><div class="ttdeci">sparsityPattern sparsity_pattern</div><div class="ttdef"><b>Definition:</b> IGA.h:115</div></div>
+<div class="ttc" id="classdense_vector_html"><div class="ttname"><a href="classdense_vector.html">denseVector</a></div><div class="ttdef"><b>Definition:</b> sparsityDataClass.h:120</div></div>
+<div class="ttc" id="class_i_g_a_html_a043f792f8334477a2989335a2f4ba617"><div class="ttname"><a href="class_i_g_a.html#a043f792f8334477a2989335a2f4ba617">IGA::system_matrix</a></div><div class="ttdeci">sparseMatrix system_matrix</div><div class="ttdef"><b>Definition:</b> IGA.h:131</div></div>
+<div class="ttc" id="class_i_g_a_html_a40a9aae9d341b0e501011653456d84e4"><div class="ttname"><a href="class_i_g_a.html#a40a9aae9d341b0e501011653456d84e4">IGA::outputVariables</a></div><div class="ttdeci">std::vector&lt; solutionClass&lt; dim &gt; * &gt; outputVariables</div><div class="ttdef"><b>Definition:</b> IGA.h:161</div></div>
+<div class="ttc" id="class_i_g_a_html_af03fb88b0330044ffa586bdceb0649cc"><div class="ttname"><a href="class_i_g_a.html#af03fb88b0330044ffa586bdceb0649cc">IGA::sparsity_pattern</a></div><div class="ttdeci">sparsityPattern sparsity_pattern</div><div class="ttdef"><b>Definition:</b> IGA.h:126</div></div>
 <div class="ttc" id="classsparsity_pattern_html"><div class="ttname"><a href="classsparsity_pattern.html">sparsityPattern</a></div><div class="ttdef"><b>Definition:</b> sparsityDataClass.h:20</div></div>
 <div class="ttc" id="classparameters_class_html"><div class="ttname"><a href="classparameters_class.html">parametersClass</a></div><div class="ttdef"><b>Definition:</b> parameters.h:11</div></div>
 <div class="ttc" id="class_n_u_r_b_s_mesh_html"><div class="ttname"><a href="class_n_u_r_b_s_mesh.html">NURBSMesh</a></div><div class="ttdef"><b>Definition:</b> NURBSClass.h:42</div></div>
-<div class="ttc" id="classknot_span_html"><div class="ttname"><a href="classknot_span.html">knotSpan</a></div><div class="ttdef"><b>Definition:</b> NURBSClass.h:178</div></div>
-<div class="ttc" id="class_i_g_a_html_a14b2772c0245fd44a86d87dc03b65571"><div class="ttname"><a href="class_i_g_a.html#a14b2772c0245fd44a86d87dc03b65571">IGA::params</a></div><div class="ttdeci">parametersClass &amp; params</div><div class="ttdef"><b>Definition:</b> IGA.h:102</div></div>
+<div class="ttc" id="classknot_span_html"><div class="ttname"><a href="classknot_span.html">knotSpan</a></div><div class="ttdef"><b>Definition:</b> NURBSClass.h:182</div></div>
+<div class="ttc" id="class_i_g_a_html_a14b2772c0245fd44a86d87dc03b65571"><div class="ttname"><a href="class_i_g_a.html#a14b2772c0245fd44a86d87dc03b65571">IGA::params</a></div><div class="ttdeci">parametersClass &amp; params</div><div class="ttdef"><b>Definition:</b> IGA.h:110</div></div>
 <div class="ttc" id="headers__c_8h_html"><div class="ttname"><a href="headers__c_8h.html">headers_c.h</a></div></div>
-<div class="ttc" id="classsparse_matrix_html"><div class="ttname"><a href="classsparse_matrix.html">sparseMatrix</a></div><div class="ttdef"><b>Definition:</b> sparsityDataClass.h:148</div></div>
+<div class="ttc" id="class_i_g_a_html_a06231ba5613c2aa1f873f0591baae05d"><div class="ttname"><a href="class_i_g_a.html#a06231ba5613c2aa1f873f0591baae05d">IGA::currentIteration</a></div><div class="ttdeci">unsigned int currentIteration</div><div class="ttdef"><b>Definition:</b> IGA.h:176</div></div>
+<div class="ttc" id="classsparse_matrix_html"><div class="ttname"><a href="classsparse_matrix.html">sparseMatrix</a></div><div class="ttdef"><b>Definition:</b> sparsityDataClass.h:187</div></div>
 <div class="ttc" id="classmodel_html"><div class="ttname"><a href="classmodel.html">model</a></div><div class="ttdef"><b>Definition:</b> model.h:33</div></div>
 <div class="ttc" id="class_i_g_a_html"><div class="ttname"><a href="class_i_g_a.html">IGA</a></div><div class="ttdef"><b>Definition:</b> IGA.h:25</div></div>
 <div class="ttc" id="headers___i_g_a_8h_html"><div class="ttname"><a href="headers___i_g_a_8h.html">headers_IGA.h</a></div></div>
-<div class="ttc" id="class_i_g_a_html_abdeea3478d8f3c0d40d369174eae62e4"><div class="ttname"><a href="class_i_g_a.html#abdeea3478d8f3c0d40d369174eae62e4">IGA::assembler_lock</a></div><div class="ttdeci">dealii::Threads::Mutex assembler_lock</div><div class="ttdef"><b>Definition:</b> IGA.h:145</div></div>
-<div class="ttc" id="class_i_g_a_html_a04565b2cc3055b2bf27fde89b576a8b9"><div class="ttname"><a href="class_i_g_a.html#a04565b2cc3055b2bf27fde89b576a8b9">IGA::Un</a></div><div class="ttdeci">denseVector Un</div><div class="ttdef"><b>Definition:</b> IGA.h:123</div></div>
-<div class="ttc" id="class_i_g_a_html_a2c04b39114bf641c896e6dc2347219c4"><div class="ttname"><a href="class_i_g_a.html#a2c04b39114bf641c896e6dc2347219c4">IGA::numIncrements</a></div><div class="ttdeci">unsigned int numIncrements</div><div class="ttdef"><b>Definition:</b> IGA.h:140</div></div>
-<div class="ttc" id="class_i_g_a_html_a6ff7412a866118a5c3a5393eaf606578"><div class="ttname"><a href="class_i_g_a.html#a6ff7412a866118a5c3a5393eaf606578">IGA::modelexample</a></div><div class="ttdeci">model&lt; Sacado::Fad::DFad&lt; double &gt;, dim &gt; * modelexample</div><div class="ttdef"><b>Definition:</b> IGA.h:103</div></div>
-<div class="ttc" id="class_i_g_a_html_a1e07c5269190ff30a727c8a315ca7138"><div class="ttname"><a href="class_i_g_a.html#a1e07c5269190ff30a727c8a315ca7138">IGA::dirichletMap</a></div><div class="ttdeci">std::map&lt; unsigned int, double &gt; dirichletMap</div><div class="ttdef"><b>Definition:</b> IGA.h:128</div></div>
+<div class="ttc" id="class_i_g_a_html_a10a37b45fda48f67f1f3fb7626048de5"><div class="ttname"><a href="class_i_g_a.html#a10a37b45fda48f67f1f3fb7626048de5">IGA::U</a></div><div class="ttdeci">denseVector U</div><div class="ttdef"><b>Definition:</b> IGA.h:141</div></div>
+<div class="ttc" id="class_i_g_a_html_abdeea3478d8f3c0d40d369174eae62e4"><div class="ttname"><a href="class_i_g_a.html#abdeea3478d8f3c0d40d369174eae62e4">IGA::assembler_lock</a></div><div class="ttdeci">dealii::Threads::Mutex assembler_lock</div><div class="ttdef"><b>Definition:</b> IGA.h:181</div></div>
+<div class="ttc" id="class_i_g_a_html_a04565b2cc3055b2bf27fde89b576a8b9"><div class="ttname"><a href="class_i_g_a.html#a04565b2cc3055b2bf27fde89b576a8b9">IGA::Un</a></div><div class="ttdeci">denseVector Un</div><div class="ttdef"><b>Definition:</b> IGA.h:146</div></div>
+<div class="ttc" id="class_i_g_a_html_aaa3e571ef2d31435753cc7ff7e2ff92d"><div class="ttname"><a href="class_i_g_a.html#aaa3e571ef2d31435753cc7ff7e2ff92d">IGA::system_rhs</a></div><div class="ttdeci">denseVector system_rhs</div><div class="ttdef"><b>Definition:</b> IGA.h:136</div></div>
+<div class="ttc" id="class_i_g_a_html_a2c04b39114bf641c896e6dc2347219c4"><div class="ttname"><a href="class_i_g_a.html#a2c04b39114bf641c896e6dc2347219c4">IGA::numIncrements</a></div><div class="ttdeci">unsigned int numIncrements</div><div class="ttdef"><b>Definition:</b> IGA.h:166</div></div>
+<div class="ttc" id="class_i_g_a_html_a6ff7412a866118a5c3a5393eaf606578"><div class="ttname"><a href="class_i_g_a.html#a6ff7412a866118a5c3a5393eaf606578">IGA::modelexample</a></div><div class="ttdeci">model&lt; Sacado::Fad::DFad&lt; double &gt;, dim &gt; * modelexample</div><div class="ttdef"><b>Definition:</b> IGA.h:115</div></div>
+<div class="ttc" id="class_i_g_a_html_a1e07c5269190ff30a727c8a315ca7138"><div class="ttname"><a href="class_i_g_a.html#a1e07c5269190ff30a727c8a315ca7138">IGA::dirichletMap</a></div><div class="ttdeci">std::map&lt; unsigned int, double &gt; dirichletMap</div><div class="ttdef"><b>Definition:</b> IGA.h:156</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

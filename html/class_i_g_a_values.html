@@ -253,7 +253,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>return JxW of volume, face, line and plane </p>
+<p>return Jacobian times weight of volume </p>
 
 </div>
 </div>
@@ -280,6 +280,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return Jacobian times weight of face </p>
 
 </div>
 </div>
@@ -306,6 +307,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return Jacobian times weight of line </p>
 
 </div>
 </div>
@@ -332,6 +334,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return Jacobian times weight of plane </p>
 
 </div>
 </div>
@@ -403,7 +406,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>return shape_value first derivatives at quadrature points of volume, face, line and plane </p>
+<p>return basis function value first derivatives at quadrature points of volume </p>
 
 </div>
 </div>
@@ -436,6 +439,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return basis function value first derivatives at quadrature points of face </p>
 
 </div>
 </div>
@@ -462,7 +466,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>return shape_value second derivatives at quadrature points of volume, face, line and plane </p>
+<p>return basis function value second derivatives at quadrature points of volume </p>
 
 </div>
 </div>
@@ -495,6 +499,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return basis function value second derivatives at quadrature points of face </p>
 
 </div>
 </div>
@@ -527,6 +532,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return basis function value second derivatives at quadrature points of line </p>
 
 </div>
 </div>
@@ -559,6 +565,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return basis function value second derivatives at quadrature points of plane </p>
 
 </div>
 </div>
@@ -591,6 +598,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return basis function value first derivatives at quadrature points of line </p>
 
 </div>
 </div>
@@ -623,6 +631,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return basis function value first derivatives at quadrature points of plane </p>
 
 </div>
 </div>
@@ -649,7 +658,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>return shape_value at quadrature points of volume, face, line and plane </p>
+<p>return basis function value at quadrature points of volume </p>
 
 </div>
 </div>
@@ -682,6 +691,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return basis function value at quadrature points of face </p>
 
 </div>
 </div>
@@ -714,6 +724,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return basis function value at quadrature points of line </p>
 
 </div>
 </div>
@@ -746,6 +757,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return basis function value at quadrature points of plane </p>
 
 </div>
 </div>
@@ -762,7 +774,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>return # of dof at control point at this # of dofs_per_cell return # of control point at this # of dofs_per_cell </p>
+<p>return # of dof at control point at this # of dofs_per_cell </p>
 
 </div>
 </div>
@@ -779,6 +791,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return # of control point at this # of dofs_per_cell </p>
 
 </div>
 </div>
@@ -800,6 +813,7 @@ class IGAValues&lt; dim &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>basis function second derivative at each quadrature point </p>
 
 </div>
 </div>
@@ -820,6 +834,7 @@ class IGAValues&lt; dim &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>basis function first derivative at each quadrature point </p>
 
 </div>
 </div>
@@ -840,7 +855,7 @@ class IGAValues&lt; dim &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>basis function value and its first and second derivative at each quadrature point determinant of jacobian times weight at each quadrature point (include quadpoints on plane and line) </p>
+<p>basis function value at each quadrature point </p>
 
 </div>
 </div>
@@ -866,6 +881,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>controlpoints_per_cell: total controlpoints of this cell </p>
 
 </div>
 </div>
@@ -899,6 +915,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>dofPerControlPoint: dof per control point </p>
 
 </div>
 </div>
@@ -911,7 +928,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>dofs_per_cell: total number of dofs of this cell controlpoints_per_cell: total controlpoints of this cell dofPerControlPoint: dof per control point numberOfDerivatives: number Of Derivatives of basis function </p>
+<p>dofs_per_cell: total number of dofs of this cell </p>
 
 </div>
 </div>
@@ -932,6 +949,7 @@ class IGAValues&lt; dim &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>determinant of jacobian times weight at each quadrature point (include quadpoints on plane and line) </p>
 
 </div>
 </div>
@@ -944,6 +962,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>if cell contains boundary or marked line and plane, get # of quadpoint along line </p>
 
 </div>
 </div>
@@ -977,6 +996,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>number of quadrature_points of boundary surface </p>
 
 </div>
 </div>
@@ -989,6 +1009,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>number of quadrature_points of marked line </p>
 
 </div>
 </div>
@@ -1001,6 +1022,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>number of quadrature_points of marked plane </p>
 
 </div>
 </div>
@@ -1013,7 +1035,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>number of quadrature_points of volume, boundary surface, marked line and marked plane </p>
+<p>number of quadrature_points of volume </p>
 
 </div>
 </div>
@@ -1026,6 +1048,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>numberOfDerivatives: number Of Derivatives of basis function </p>
 
 </div>
 </div>
@@ -1038,6 +1061,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>if cell contains boundary or marked line and plane, get # of quadpoint on plane </p>
 
 </div>
 </div>
@@ -1105,7 +1129,7 @@ class IGAValues&lt; dim &gt;</h3>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>if cell contains boundary or marked line and plane quadratureMap: get # of quadpoint at boundary face LinequadratureMap: get # of quadpoint along line PlanequadratureMap: get # of quadpoint on plane </p>
+<p>if cell contains boundary or marked line and plane, get # of quadpoint at boundary face </p>
 
 </div>
 </div>

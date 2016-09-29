@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['setbool',['setBool',['../classparameters_class.html#a2e934b90f4b1a2aa37c76368911e68bf',1,'parametersClass']]],
+  ['setdouble',['setDouble',['../classparameters_class.html#a3bbb8ec5b4f0e219f3229b76c5155d6d',1,'parametersClass']]],
+  ['setint',['setInt',['../classparameters_class.html#af0266daacaed42bd1b641176363ae9ac',1,'parametersClass']]],
+  ['setstring',['setString',['../classparameters_class.html#a1ebd7dee83d68fe3c29a49172440816d',1,'parametersClass']]],
+  ['setup',['setup',['../class_i_g_a.html#a4fc01d736fe50cf5b977f755b675f11d',1,'IGA']]],
+  ['setupcellvalues',['setupCellValues',['../class_i_g_a.html#a0920e2b529f65a83047d0fc46be3106c',1,'IGA']]],
+  ['shape_5fgrad',['shape_grad',['../class_i_g_a_values.html#ac924db02cd620cd33f21d505fa632652',1,'IGAValues']]],
+  ['shape_5fgrad_5fface',['shape_grad_face',['../class_i_g_a_values.html#a82fa07b1ecea4baba76dfdb8e5b691ab',1,'IGAValues']]],
+  ['shape_5fgrad_5fgrad',['shape_grad_grad',['../class_i_g_a_values.html#a501ca7a88c8cf4ee2e990a490531780a',1,'IGAValues']]],
+  ['shape_5fgrad_5fgrad_5fface',['shape_grad_grad_face',['../class_i_g_a_values.html#aff4a3e65ab8430f0379293b74f83582b',1,'IGAValues']]],
+  ['shape_5fgrad_5fgrad_5fline',['shape_grad_grad_line',['../class_i_g_a_values.html#a6784b6a48dd884a7916aae925a0df6c9',1,'IGAValues']]],
+  ['shape_5fgrad_5fgrad_5fplane',['shape_grad_grad_plane',['../class_i_g_a_values.html#aa8478ff7cf9a9b357dd8eb8c03b866b8',1,'IGAValues']]],
+  ['shape_5fgrad_5fline',['shape_grad_line',['../class_i_g_a_values.html#a1d283d89cf218392b392691a1f8fd442',1,'IGAValues']]],
+  ['shape_5fgrad_5fplane',['shape_grad_plane',['../class_i_g_a_values.html#acf1087e6750d5ad56397dcc6211c7ed9',1,'IGAValues']]],
+  ['shape_5fvalue',['shape_value',['../class_i_g_a_values.html#aaccdadf5b081707c27122f046d201d76',1,'IGAValues']]],
+  ['shape_5fvalue_5fface',['shape_value_face',['../class_i_g_a_values.html#ab05ba6bfef39b2ce58da13b8a3430aec',1,'IGAValues']]],
+  ['shape_5fvalue_5fline',['shape_value_line',['../class_i_g_a_values.html#ae1d3a67f18fbb6ce46fd0345821e20db',1,'IGAValues']]],
+  ['shape_5fvalue_5fplane',['shape_value_plane',['../class_i_g_a_values.html#ac983989d2bfc9217c542aaeece42bae0',1,'IGAValues']]],
+  ['size',['size',['../classdense_matrix.html#a7033bafa80d2349b9b0da59d8c486767',1,'denseMatrix::size()'],['../classdense_vector.html#a7033bafa80d2349b9b0da59d8c486767',1,'denseVector::size()']]],
+  ['solutionclass',['solutionClass',['../classsolution_class.html#a984e6a9f1ded1bcb07780620f0fa4512',1,'solutionClass']]],
+  ['solve',['solve',['../class_i_g_a.html#af7d39f0eac0af0ed5785935ac72a1e7d',1,'IGA']]],
+  ['sparsematrix',['sparseMatrix',['../classsparse_matrix.html#aca324bc11d8b1ace141a81527c7e0c1a',1,'sparseMatrix']]],
+  ['sparsitypattern',['sparsityPattern',['../classsparsity_pattern.html#a0a804cd6419704862b3887d263192f3e',1,'sparsityPattern']]],
+  ['system_5fto_5fcomponent_5findex',['system_to_component_index',['../class_i_g_a_values.html#aaf334ed3dcc055104406ecde01f1d02d',1,'IGAValues']]],
+  ['system_5fto_5fcontrolpoint_5findex',['system_to_controlpoint_index',['../class_i_g_a_values.html#a9d58f821441b0643a783355cdd492595',1,'IGAValues']]]
+];

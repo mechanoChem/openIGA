@@ -1,0 +1,2321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>headers_c.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/headers/</path>
+    <filename>headers__c_8h</filename>
+  </compound>
+  <compound kind="file">
+    <name>headers_dealii.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/headers/</path>
+    <filename>headers__dealii_8h</filename>
+  </compound>
+  <compound kind="file">
+    <name>headers_IGA.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/headers/</path>
+    <filename>headers___i_g_a_8h</filename>
+    <includes id="_n_u_r_b_s_class_8h" name="NURBSClass.h" local="yes" imported="no">../IGAbase/NURBSClass.h</includes>
+    <includes id="parameters_8h" name="parameters.h" local="yes" imported="no">../supplementary/parameters.h</includes>
+    <includes id="solution_class_8h" name="solutionClass.h" local="yes" imported="no">../supplementary/solutionClass.h</includes>
+    <includes id="sparsity_data_class_8h" name="sparsityDataClass.h" local="yes" imported="no">../supplementary/sparsityDataClass.h</includes>
+    <includes id="vtk_functions_8h" name="vtkFunctions.h" local="yes" imported="no">../supplementary/vtkFunctions.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>headers_solver.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/headers/</path>
+    <filename>headers__solver_8h</filename>
+    <includes id="super_l_u__solver_8h" name="superLU_solver.h" local="yes" imported="no">../solver/superLU_solver.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>IGA.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/</path>
+    <filename>_i_g_a_8h</filename>
+    <includes id="headers__dealii_8h" name="headers_dealii.h" local="yes" imported="no">headers/headers_dealii.h</includes>
+    <includes id="headers___i_g_a_8h" name="headers_IGA.h" local="yes" imported="no">headers/headers_IGA.h</includes>
+    <includes id="headers__c_8h" name="headers_c.h" local="yes" imported="no">headers/headers_c.h</includes>
+    <includes id="model_8h" name="model.h" local="yes" imported="no">model/model.h</includes>
+    <class kind="class">IGA</class>
+  </compound>
+  <compound kind="file">
+    <name>NURBSClass.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/IGAbase/</path>
+    <filename>_n_u_r_b_s_class_8h</filename>
+    <includes id="include_2supplementary_2supplementary_functions_8h" name="supplementaryFunctions.h" local="yes" imported="no">../supplementary/supplementaryFunctions.h</includes>
+    <class kind="class">IGAValues</class>
+    <class kind="class">NURBSMesh</class>
+    <class kind="class">nativeNURBSStructure</class>
+    <class kind="class">basisFunction</class>
+    <class kind="class">controlPoint</class>
+    <class kind="class">knotSpan</class>
+    <class kind="class">NURBSMesh</class>
+    <class kind="class">IGAValues</class>
+  </compound>
+  <compound kind="file">
+    <name>model.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/model/</path>
+    <filename>model_8h</filename>
+    <includes id="data_struct_8h" name="dataStruct.h" local="yes" imported="no">../supplementary/dataStruct.h</includes>
+    <includes id="parameters_8h" name="parameters.h" local="yes" imported="no">../supplementary/parameters.h</includes>
+    <includes id="_n_u_r_b_s_class_8h" name="NURBSClass.h" local="yes" imported="no">../IGAbase/NURBSClass.h</includes>
+    <class kind="class">model</class>
+  </compound>
+  <compound kind="file">
+    <name>superLU_solver.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/solver/</path>
+    <filename>super_l_u__solver_8h</filename>
+    <member kind="function">
+      <type>int</type>
+      <name>luSolver</name>
+      <anchorfile>super_l_u__solver_8h.html</anchorfile>
+      <anchor>a760f4caae8fa863631a21dbb61882941</anchor>
+      <arglist>(double *aTemp, int *asubTemp, int *xaTemp, double *rhsTemp, int m, int n, int nnz, double *_sol, int _solverInfo)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>superLUMT_solver.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/solver/</path>
+    <filename>super_l_u_m_t__solver_8h</filename>
+    <member kind="function">
+      <type>int</type>
+      <name>luSolver</name>
+      <anchorfile>super_l_u_m_t__solver_8h.html</anchorfile>
+      <anchor>a760f4caae8fa863631a21dbb61882941</anchor>
+      <arglist>(double *aTemp, int *asubTemp, int *xaTemp, double *rhsTemp, int m, int n, int nnz, double *_sol, int _solverInfo)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>dataStruct.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/supplementary/</path>
+    <filename>data_struct_8h</filename>
+    <class kind="struct">deformationMap</class>
+    <class kind="struct">deformationMapwithGrad</class>
+  </compound>
+  <compound kind="file">
+    <name>parameters.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/supplementary/</path>
+    <filename>parameters_8h</filename>
+    <class kind="class">parametersClass</class>
+  </compound>
+  <compound kind="file">
+    <name>solutionClass.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/supplementary/</path>
+    <filename>solution_class_8h</filename>
+    <includes id="headers__solver_8h" name="headers_solver.h" local="yes" imported="no">../headers/headers_solver.h</includes>
+    <includes id="sparsity_data_class_8h" name="sparsityDataClass.h" local="yes" imported="no">sparsityDataClass.h</includes>
+    <includes id="_n_u_r_b_s_class_8h" name="NURBSClass.h" local="yes" imported="no">../IGAbase/NURBSClass.h</includes>
+    <class kind="class">solutionClass</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>dataType</name>
+      <anchorfile>solution_class_8h.html</anchorfile>
+      <anchor>a617ddb88ebf58e2f0add63ae88a9f705</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SCALAR</name>
+      <anchorfile>solution_class_8h.html</anchorfile>
+      <anchor>a617ddb88ebf58e2f0add63ae88a9f705a7efbb6cac96595e63e8fa171bde1eb68</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VECTOR</name>
+      <anchorfile>solution_class_8h.html</anchorfile>
+      <anchor>a617ddb88ebf58e2f0add63ae88a9f705a1a85ef13eaa80e8561743892f9dba958</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TENSOR</name>
+      <anchorfile>solution_class_8h.html</anchorfile>
+      <anchor>a617ddb88ebf58e2f0add63ae88a9f705aea73d7e9d7db611ad93f6acf4486e4b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>dataLocation</name>
+      <anchorfile>solution_class_8h.html</anchorfile>
+      <anchor>a15116f7a49d116acf07dd385c528d2fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>NODAL</name>
+      <anchorfile>solution_class_8h.html</anchorfile>
+      <anchor>a15116f7a49d116acf07dd385c528d2fcac282c103e271a2772ca8dd71bb9b5e3e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QUADRATURE</name>
+      <anchorfile>solution_class_8h.html</anchorfile>
+      <anchor>a15116f7a49d116acf07dd385c528d2fca7f6519ae50495c090a366b1f0764c9ae</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>sparsityDataClass.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/supplementary/</path>
+    <filename>sparsity_data_class_8h</filename>
+    <includes id="_n_u_r_b_s_class_8h" name="NURBSClass.h" local="yes" imported="no">../IGAbase/NURBSClass.h</includes>
+    <class kind="class">sparsityPattern</class>
+    <class kind="class">denseMatrix</class>
+    <class kind="class">denseVector</class>
+    <class kind="class">sparseMatrix</class>
+  </compound>
+  <compound kind="file">
+    <name>vtkFunctions.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/supplementary/</path>
+    <filename>vtk_functions_8h</filename>
+    <includes id="solution_class_8h" name="solutionClass.h" local="yes" imported="no">solutionClass.h</includes>
+    <includes id="sparsity_data_class_8h" name="sparsityDataClass.h" local="yes" imported="no">sparsityDataClass.h</includes>
+    <includes id="_n_u_r_b_s_class_8h" name="NURBSClass.h" local="yes" imported="no">../IGAbase/NURBSClass.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>writeVTK</name>
+      <anchorfile>vtk_functions_8h.html</anchorfile>
+      <anchor>aeb5f0839693e10e6156070ddb1dd3d5e</anchor>
+      <arglist>(const char *vtkFileName, std::vector&lt; int &gt; &amp;numPoints, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;coords, std::vector&lt; solutionClass&lt; dim &gt; * &gt; &amp;outputVariables, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;values)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>writeMesh</name>
+      <anchorfile>vtk_functions_8h.html</anchorfile>
+      <anchor>ac9c75eb86a29057586c880749575a025</anchor>
+      <arglist>(const char *meshFileName, unsigned int _cycle, NURBSMesh&lt; dim &gt; *mesh, std::vector&lt; int &gt; outputGridSize, std::vector&lt; solutionClass&lt; dim &gt; * &gt; &amp;outputVariables)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>apply_boundary_conditions.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>apply__boundary__conditions_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>apply_initial_values.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>apply__initial__values_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>assemble_system.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>assemble__system_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>assemble_system_interval.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>assemble__system__interval_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>condenseKandRHS.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>condense_kand_r_h_s_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>mark_boundaries.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>mark__boundaries_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>output.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>output_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>run.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>run_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>setup.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>setup_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>setupCellValues.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>setup_cell_values_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>solve.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>solve_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>IGA.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/</path>
+    <filename>_i_g_a_8cc</filename>
+    <includes id="_i_g_a_8h" name="IGA.h" local="yes" imported="no">../../include/IGA.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>IGAnurbs.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/IGAbase/</path>
+    <filename>_i_g_anurbs_8cc</filename>
+    <includes id="_n_u_r_b_s_class_8h" name="NURBSClass.h" local="yes" imported="no">../../../include/IGAbase/NURBSClass.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>IGAvalue.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/IGAbase/</path>
+    <filename>_i_g_avalue_8cc</filename>
+    <includes id="_n_u_r_b_s_class_8h" name="NURBSClass.h" local="yes" imported="no">../../../include/IGAbase/NURBSClass.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>nativeNURBSStructure.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/IGAbase/</path>
+    <filename>native_n_u_r_b_s_structure_8cc</filename>
+    <includes id="_n_u_r_b_s_class_8h" name="NURBSClass.h" local="yes" imported="no">../../../include/IGAbase/NURBSClass.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>NURBSMesh.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/IGAbase/</path>
+    <filename>_n_u_r_b_s_mesh_8cc</filename>
+    <includes id="_n_u_r_b_s_class_8h" name="NURBSClass.h" local="yes" imported="no">../../../include/IGAbase/NURBSClass.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>superLU_solver.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/solver/</path>
+    <filename>super_l_u__solver_8cc</filename>
+    <includes id="super_l_u__solver_8h" name="superLU_solver.h" local="yes" imported="no">../../../include/solver/superLU_solver.h</includes>
+    <member kind="function">
+      <type>int</type>
+      <name>luSolver</name>
+      <anchorfile>super_l_u__solver_8cc.html</anchorfile>
+      <anchor>a760f4caae8fa863631a21dbb61882941</anchor>
+      <arglist>(double *aTemp, int *asubTemp, int *xaTemp, double *rhsTemp, int m, int n, int nnz, double *_sol, int _solverInfo)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>superLUMT_solver_bad.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/solver/</path>
+    <filename>super_l_u_m_t__solver__bad_8cc</filename>
+    <includes id="super_l_u__solver_8h" name="superLU_solver.h" local="yes" imported="no">../../../include/solver/superLU_solver.h</includes>
+    <member kind="function">
+      <type>int</type>
+      <name>luSolver</name>
+      <anchorfile>super_l_u_m_t__solver__bad_8cc.html</anchorfile>
+      <anchor>a760f4caae8fa863631a21dbb61882941</anchor>
+      <arglist>(double *aTemp, int *asubTemp, int *xaTemp, double *rhsTemp, int m, int n, int nnz, double *_sol, int _solverInfo)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>constitutive.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>constitutive_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>evaluateStress.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>evaluate_stress_8cc</filename>
+    <includes id="model_8h" name="model.h" local="yes" imported="no">../../include/model/model.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>functionEvaluations.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>function_evaluations_8cc</filename>
+    <includes id="model_8h" name="model.h" local="yes" imported="no">../../include/model/model.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>getDeformationMapWithGradient.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>get_deformation_map_with_gradient_8cc</filename>
+    <includes id="model_8h" name="model.h" local="yes" imported="no">../../include/model/model.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>getEnergy.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>get_energy_8cc</filename>
+    <includes id="model_8h" name="model.h" local="yes" imported="no">../../include/model/model.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>getResidual.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>get_residual_8cc</filename>
+    <includes id="model_8h" name="model.h" local="yes" imported="no">../../include/model/model.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>model.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>model_8cc</filename>
+    <includes id="model_8h" name="model.h" local="yes" imported="no">../../include/model/model.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>reinit.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>reinit_8cc</filename>
+    <includes id="model_8h" name="model.h" local="yes" imported="no">../../include/model/model.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>residualForHighOrderBC.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>residual_for_high_order_b_c_8cc</filename>
+    <includes id="model_8h" name="model.h" local="yes" imported="no">../../include/model/model.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>residualForMechanics.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>residual_for_mechanics_8cc</filename>
+    <includes id="model_8h" name="model.h" local="yes" imported="no">../../include/model/model.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>residualForNeummanBC.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>residual_for_neumman_b_c_8cc</filename>
+    <includes id="model_8h" name="model.h" local="yes" imported="no">../../include/model/model.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>dataStruct_tem.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/supplementary/</path>
+    <filename>data_struct__tem_8h</filename>
+    <includes id="data_struct_8h" name="dataStruct.h" local="yes" imported="no">../../include/supplementary/dataStruct.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>parameters.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/supplementary/</path>
+    <filename>parameters_8cc</filename>
+    <includes id="parameters_8h" name="parameters.h" local="yes" imported="no">../../include/supplementary/parameters.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>solutionClass.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/supplementary/</path>
+    <filename>solution_class_8cc</filename>
+    <includes id="solution_class_8h" name="solutionClass.h" local="yes" imported="no">../../include/supplementary/solutionClass.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>sparsityDataClass.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/supplementary/</path>
+    <filename>sparsity_data_class_8cc</filename>
+    <includes id="sparsity_data_class_8h" name="sparsityDataClass.h" local="yes" imported="no">../../include/supplementary/sparsityDataClass.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>supplementaryFunctions.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/supplementary/</path>
+    <filename>src_2supplementary_2supplementary_functions_8h</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>resolve</name>
+      <anchorfile>src_2supplementary_2supplementary_functions_8h.html</anchorfile>
+      <anchor>a79aadc7954ffb5ac106895536982aab2</anchor>
+      <arglist>(unsigned int i, unsigned int div, std::vector&lt; unsigned int &gt; &amp;indices)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>factorial</name>
+      <anchorfile>src_2supplementary_2supplementary_functions_8h.html</anchorfile>
+      <anchor>aea62baaa1b97041829042603549ad2e1</anchor>
+      <arglist>(unsigned int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Bin</name>
+      <anchorfile>src_2supplementary_2supplementary_functions_8h.html</anchorfile>
+      <anchor>af58f22c7895801df1bf7b84d4c5c2236</anchor>
+      <arglist>(unsigned int i, unsigned int j)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>determinantOfMinor</name>
+      <anchorfile>src_2supplementary_2supplementary_functions_8h.html</anchorfile>
+      <anchor>ac00d5d8b0e5a6d30c14a52a797f77a1a</anchor>
+      <arglist>(unsigned int theRowHeightY, unsigned int theColumnWidthX, dealii::Table&lt; 2, T &gt; &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getInverse</name>
+      <anchorfile>src_2supplementary_2supplementary_functions_8h.html</anchorfile>
+      <anchor>ad58a099659bc83c911509db927b1e1f8</anchor>
+      <arglist>(dealii::Table&lt; 2, T &gt; &amp;matrix, dealii::Table&lt; 2, T &gt; &amp;invMatrix, T &amp;det)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>supplementaryFunctions.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/supplementary/</path>
+    <filename>include_2supplementary_2supplementary_functions_8h</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>resolve</name>
+      <anchorfile>include_2supplementary_2supplementary_functions_8h.html</anchorfile>
+      <anchor>a79aadc7954ffb5ac106895536982aab2</anchor>
+      <arglist>(unsigned int i, unsigned int div, std::vector&lt; unsigned int &gt; &amp;indices)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>factorial</name>
+      <anchorfile>include_2supplementary_2supplementary_functions_8h.html</anchorfile>
+      <anchor>aea62baaa1b97041829042603549ad2e1</anchor>
+      <arglist>(unsigned int number)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Bin</name>
+      <anchorfile>include_2supplementary_2supplementary_functions_8h.html</anchorfile>
+      <anchor>af58f22c7895801df1bf7b84d4c5c2236</anchor>
+      <arglist>(unsigned int i, unsigned int j)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>determinantOfMinor</name>
+      <anchorfile>include_2supplementary_2supplementary_functions_8h.html</anchorfile>
+      <anchor>ac00d5d8b0e5a6d30c14a52a797f77a1a</anchor>
+      <arglist>(unsigned int theRowHeightY, unsigned int theColumnWidthX, dealii::Table&lt; 2, T &gt; &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getInverse</name>
+      <anchorfile>include_2supplementary_2supplementary_functions_8h.html</anchorfile>
+      <anchor>ad58a099659bc83c911509db927b1e1f8</anchor>
+      <arglist>(dealii::Table&lt; 2, T &gt; &amp;matrix, dealii::Table&lt; 2, T &gt; &amp;invMatrix, T &amp;det)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>vtkFunctions.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/supplementary/</path>
+    <filename>vtk_functions_8cc</filename>
+    <includes id="vtk_functions_8h" name="vtkFunctions.h" local="yes" imported="no">../../include/supplementary/vtkFunctions.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>writeVTK</name>
+      <anchorfile>vtk_functions_8cc.html</anchorfile>
+      <anchor>aeb5f0839693e10e6156070ddb1dd3d5e</anchor>
+      <arglist>(const char *vtkFileName, std::vector&lt; int &gt; &amp;numPoints, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;coords, std::vector&lt; solutionClass&lt; dim &gt; * &gt; &amp;outputVariables, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;values)</arglist>
+    </member>
+    <member kind="function">
+      <type>template void</type>
+      <name>writeVTK&lt; 1 &gt;</name>
+      <anchorfile>vtk_functions_8cc.html</anchorfile>
+      <anchor>a7dda8a0702f384efa7acdb2503ba2922</anchor>
+      <arglist>(const char *vtkFileName, std::vector&lt; int &gt; &amp;numPoints, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;coords, std::vector&lt; solutionClass&lt; 1 &gt; * &gt; &amp;outputVariables, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;values)</arglist>
+    </member>
+    <member kind="function">
+      <type>template void</type>
+      <name>writeVTK&lt; 2 &gt;</name>
+      <anchorfile>vtk_functions_8cc.html</anchorfile>
+      <anchor>a1186f1bef7f5daa1aeaa08abe79860a8</anchor>
+      <arglist>(const char *vtkFileName, std::vector&lt; int &gt; &amp;numPoints, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;coords, std::vector&lt; solutionClass&lt; 2 &gt; * &gt; &amp;outputVariables, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;values)</arglist>
+    </member>
+    <member kind="function">
+      <type>template void</type>
+      <name>writeVTK&lt; 3 &gt;</name>
+      <anchorfile>vtk_functions_8cc.html</anchorfile>
+      <anchor>af5c172804990da5e4e6d14c1f30f4ce7</anchor>
+      <arglist>(const char *vtkFileName, std::vector&lt; int &gt; &amp;numPoints, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;coords, std::vector&lt; solutionClass&lt; 3 &gt; * &gt; &amp;outputVariables, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;values)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>writeMesh</name>
+      <anchorfile>vtk_functions_8cc.html</anchorfile>
+      <anchor>ac9c75eb86a29057586c880749575a025</anchor>
+      <arglist>(const char *meshFileName, unsigned int _cycle, NURBSMesh&lt; dim &gt; *mesh, std::vector&lt; int &gt; outputGridSize, std::vector&lt; solutionClass&lt; dim &gt; * &gt; &amp;outputVariables)</arglist>
+    </member>
+    <member kind="function">
+      <type>template void</type>
+      <name>writeMesh&lt; 1 &gt;</name>
+      <anchorfile>vtk_functions_8cc.html</anchorfile>
+      <anchor>a91d1c491f347aad8fe8f4a9786465ab6</anchor>
+      <arglist>(const char *meshFileName, unsigned int _cycle, NURBSMesh&lt; 1 &gt; *mesh, std::vector&lt; int &gt; outputGridSize, std::vector&lt; solutionClass&lt; 1 &gt; * &gt; &amp;outputVariables)</arglist>
+    </member>
+    <member kind="function">
+      <type>template void</type>
+      <name>writeMesh&lt; 2 &gt;</name>
+      <anchorfile>vtk_functions_8cc.html</anchorfile>
+      <anchor>a6944f02c72a6ef14f8116827759f1f1e</anchor>
+      <arglist>(const char *meshFileName, unsigned int _cycle, NURBSMesh&lt; 2 &gt; *mesh, std::vector&lt; int &gt; outputGridSize, std::vector&lt; solutionClass&lt; 2 &gt; * &gt; &amp;outputVariables)</arglist>
+    </member>
+    <member kind="function">
+      <type>template void</type>
+      <name>writeMesh&lt; 3 &gt;</name>
+      <anchorfile>vtk_functions_8cc.html</anchorfile>
+      <anchor>adbc5e9a5ec1bbf416b06a20114bf34cf</anchor>
+      <arglist>(const char *meshFileName, unsigned int _cycle, NURBSMesh&lt; 3 &gt; *mesh, std::vector&lt; int &gt; outputGridSize, std::vector&lt; solutionClass&lt; 3 &gt; * &gt; &amp;outputVariables)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>basisFunction</name>
+    <filename>classbasis_function.html</filename>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>basisFunction</name>
+      <anchorfile>classbasis_function.html</anchorfile>
+      <anchor>a2418397f007fa7417ba738841b5ca46e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>pointInBasisSupport</name>
+      <anchorfile>classbasis_function.html</anchorfile>
+      <anchor>a0abe24a6b226ac63164109f5cc9908f9</anchor>
+      <arglist>(std::vector&lt; double &gt; &amp;coords)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>pointCrossSurfaceSupport</name>
+      <anchorfile>classbasis_function.html</anchorfile>
+      <anchor>a87f2ffab7886ea4d883582011dc5102b</anchor>
+      <arglist>(double x)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>value</name>
+      <anchorfile>classbasis_function.html</anchorfile>
+      <anchor>a62a18b7501ed0862e20d7d6592781660</anchor>
+      <arglist>(std::vector&lt; double &gt; &amp;coords, std::vector&lt; unsigned int &gt; &amp;dervs)</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>weight</name>
+      <anchorfile>classbasis_function.html</anchorfile>
+      <anchor>a99108733d00274978a4979dc072bd513</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>p</name>
+      <anchorfile>classbasis_function.html</anchorfile>
+      <anchor>ae30bda06936ff260e84fd8f281cb1c2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <name>localKnots</name>
+      <anchorfile>classbasis_function.html</anchorfile>
+      <anchor>adc5e7bb4d150642312fe2a573ba151ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>double</type>
+      <name>evaluateN</name>
+      <anchorfile>classbasis_function.html</anchorfile>
+      <anchor>a124ee8bb8b2320155885af588352932b</anchor>
+      <arglist>(unsigned int i, unsigned int localKnotIndex, unsigned int _p, double xi, unsigned int k=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>controlPoint</name>
+    <filename>classcontrol_point.html</filename>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>controlPoint</name>
+      <anchorfile>classcontrol_point.html</anchorfile>
+      <anchor>a2d4b5e24704b7b1b182992a475a3b2b4</anchor>
+      <arglist>(unsigned int _id, nativeNURBSStructure&lt; dim &gt; &amp;mesh, std::vector&lt; unsigned int &gt; &amp;_dofs)</arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>id</name>
+      <anchorfile>classcontrol_point.html</anchorfile>
+      <anchor>ab7ce6f462afaf105224b0ca772a33c43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>dofs</name>
+      <anchorfile>classcontrol_point.html</anchorfile>
+      <anchor>ad2e34581805db811af027c12cca522c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>coords</name>
+      <anchorfile>classcontrol_point.html</anchorfile>
+      <anchor>a27436d8665a4880fc81550a31dc380dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>basisFunction&lt; dim &gt;</type>
+      <name>basis</name>
+      <anchorfile>classcontrol_point.html</anchorfile>
+      <anchor>a22de448d938f0a550a89e7a1fcaa3eb3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>deformationMap</name>
+    <filename>structdeformation_map.html</filename>
+    <templarg>T</templarg>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>deformationMap</name>
+      <anchorfile>structdeformation_map.html</anchorfile>
+      <anchor>a92f50110a13154228ed02857355f5067</anchor>
+      <arglist>(unsigned int n_q_points)</arglist>
+    </member>
+    <member kind="variable">
+      <type>dealii::Table&lt; 3, T &gt;</type>
+      <name>F</name>
+      <anchorfile>structdeformation_map.html</anchorfile>
+      <anchor>a7934bed7ba72b5e4a3af1fd8a4e14198</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>dealii::Table&lt; 3, T &gt;</type>
+      <name>invF</name>
+      <anchorfile>structdeformation_map.html</anchorfile>
+      <anchor>ae40deb9e4616ec6d0b77519e56646ce0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>dealii::Table&lt; 1, T &gt;</type>
+      <name>detF</name>
+      <anchorfile>structdeformation_map.html</anchorfile>
+      <anchor>aa1ff2dc8fb6f4f6e9125ca026505a977</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>deformationMapwithGrad</name>
+    <filename>structdeformation_mapwith_grad.html</filename>
+    <templarg>T</templarg>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>deformationMapwithGrad</name>
+      <anchorfile>structdeformation_mapwith_grad.html</anchorfile>
+      <anchor>a2c6e68ea962afdc7927d312d097d0bd8</anchor>
+      <arglist>(unsigned int n_q_points)</arglist>
+    </member>
+    <member kind="variable">
+      <type>dealii::Table&lt; 3, T &gt;</type>
+      <name>F</name>
+      <anchorfile>structdeformation_mapwith_grad.html</anchorfile>
+      <anchor>a7934bed7ba72b5e4a3af1fd8a4e14198</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>dealii::Table&lt; 3, T &gt;</type>
+      <name>invF</name>
+      <anchorfile>structdeformation_mapwith_grad.html</anchorfile>
+      <anchor>ae40deb9e4616ec6d0b77519e56646ce0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>dealii::Table&lt; 4, T &gt;</type>
+      <name>gradF</name>
+      <anchorfile>structdeformation_mapwith_grad.html</anchorfile>
+      <anchor>a5bd7f05522c7d581d02e4de55682f5f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>dealii::Table&lt; 1, T &gt;</type>
+      <name>detF</name>
+      <anchorfile>structdeformation_mapwith_grad.html</anchorfile>
+      <anchor>aa1ff2dc8fb6f4f6e9125ca026505a977</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>denseMatrix</name>
+    <filename>classdense_matrix.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>denseMatrix</name>
+      <anchorfile>classdense_matrix.html</anchorfile>
+      <anchor>a68ea00fafb6c094e43ce78ce71246973</anchor>
+      <arglist>(unsigned int _size1, unsigned int _size2)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>size</name>
+      <anchorfile>classdense_matrix.html</anchorfile>
+      <anchor>a7033bafa80d2349b9b0da59d8c486767</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double &amp;</type>
+      <name>operator()</name>
+      <anchorfile>classdense_matrix.html</anchorfile>
+      <anchor>afc8bf5dab68296520fcb28419bfc2320</anchor>
+      <arglist>(unsigned int _a, unsigned int _b)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator=</name>
+      <anchorfile>classdense_matrix.html</anchorfile>
+      <anchor>a1671a1fa0c46d148a8ded171f44b9ced</anchor>
+      <arglist>(double _value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print</name>
+      <anchorfile>classdense_matrix.html</anchorfile>
+      <anchor>a388f572c62279f839ee138a9afbdeeb5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <name>values</name>
+      <anchorfile>classdense_matrix.html</anchorfile>
+      <anchor>a736cd94eaecfc76c9fd3ee2452840f36</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>denseVector</name>
+    <filename>classdense_vector.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>denseVector</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>a21a609bad5a819d44e3b48d9be05c99a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>denseVector</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>a6ea94f8d2c06edb3cf24461a83ba0a57</anchor>
+      <arglist>(unsigned int _size)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>size</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>a7033bafa80d2349b9b0da59d8c486767</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>l2_norm</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>a767e43a7b07ed4a0e7a599d3508441c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reinit</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>ad5a572e7933db444be1cfe62017accce</anchor>
+      <arglist>(sparsityPattern &amp;sparsitypattern)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reinit</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>ac841066d71e48f354ad0709f17ee9c7d</anchor>
+      <arglist>(unsigned int _size)</arglist>
+    </member>
+    <member kind="function">
+      <type>double &amp;</type>
+      <name>operator()</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>af8b082f7d78b1fc6e59c647693071cdd</anchor>
+      <arglist>(unsigned int _a)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator=</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>a1671a1fa0c46d148a8ded171f44b9ced</anchor>
+      <arglist>(double _value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator=</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>adc3e9fd2c7cee3ca692dabbd81743382</anchor>
+      <arglist>(denseVector &amp;_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator+=</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>abc09c7d18f50fcc9d742829eed74bb65</anchor>
+      <arglist>(denseVector &amp;_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>a388f572c62279f839ee138a9afbdeeb5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>values</name>
+      <anchorfile>classdense_vector.html</anchorfile>
+      <anchor>a2ad192c64ff93c02f9f41c320e7aa1bc</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>IGA</name>
+    <filename>class_i_g_a.html</filename>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>IGA</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a2894de27cab25486e8799e51f216d080</anchor>
+      <arglist>(NURBSMesh&lt; dim &gt; &amp;_mesh, parametersClass &amp;_params)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~IGA</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a4f171c029d6d87ddce52fcc10d185c4e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>mark_boundaries</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a92ef57a65d92562881cbae37643a87e8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setup</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a4fc01d736fe50cf5b977f755b675f11d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setupCellValues</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a0920e2b529f65a83047d0fc46be3106c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>condenseKandRHS</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a7d58108cfb5376639654e8c23781f7b4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>solve</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>af7d39f0eac0af0ed5785935ac72a1e7d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>run</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a13a43e6d814de94978c515cb084873b1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply_boundary_conditions</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a72e1e395cdead260975e3984de835cd6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply_initial_values</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>afd602e41922cbca35d5f4c5a89398ade</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>output</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>ad7fdae3b50f58fea6066a64ebd08db85</anchor>
+      <arglist>(unsigned int _cycle)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>assemble_system</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a70e80ae3a04b0d37e2483a5b82421222</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>assemble_system_interval</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a777c7dbe634f877f3b81c51d551c4d1f</anchor>
+      <arglist>(const typename std::vector&lt; knotSpan&lt; dim &gt; &gt;::iterator &amp;begin, const typename std::vector&lt; knotSpan&lt; dim &gt; &gt;::iterator &amp;end)</arglist>
+    </member>
+    <member kind="variable">
+      <type>NURBSMesh&lt; dim &gt; *</type>
+      <name>mesh</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>acb057dab390e5fcc1535821be9eef3b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>parametersClass &amp;</type>
+      <name>params</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a14b2772c0245fd44a86d87dc03b65571</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>model&lt; Sacado::Fad::DFad&lt; double &gt;, dim &gt; *</type>
+      <name>modelexample</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a6ff7412a866118a5c3a5393eaf606578</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; IGAValues&lt; dim &gt; * &gt;</type>
+      <name>cellValues</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a34bbc3c59908d252d3301a62f23a3b1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>sparsityPattern</type>
+      <name>sparsity_pattern</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>af03fb88b0330044ffa586bdceb0649cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>sparseMatrix</type>
+      <name>system_matrix</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a043f792f8334477a2989335a2f4ba617</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>denseVector</type>
+      <name>system_rhs</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>aaa3e571ef2d31435753cc7ff7e2ff92d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>denseVector</type>
+      <name>U</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a10a37b45fda48f67f1f3fb7626048de5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>denseVector</type>
+      <name>Un</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a04565b2cc3055b2bf27fde89b576a8b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>denseVector</type>
+      <name>dU</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a71c19944d92e3e095f1cb896928b3a4d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::map&lt; unsigned int, double &gt;</type>
+      <name>dirichletMap</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a1e07c5269190ff30a727c8a315ca7138</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; solutionClass&lt; dim &gt; * &gt;</type>
+      <name>outputVariables</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a40a9aae9d341b0e501011653456d84e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>numIncrements</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a2c04b39114bf641c896e6dc2347219c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>currentIncrement</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>aca786276ce09ff562a6d9db37fc57936</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>currentIteration</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>a06231ba5613c2aa1f873f0591baae05d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>dealii::Threads::Mutex</type>
+      <name>assembler_lock</name>
+      <anchorfile>class_i_g_a.html</anchorfile>
+      <anchor>abdeea3478d8f3c0d40d369174eae62e4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>IGAValues</name>
+    <filename>class_i_g_a_values.html</filename>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>IGAValues</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a8a6c0bc1fad171c62706c183ddcd27ea</anchor>
+      <arglist>(NURBSMesh&lt; dim &gt; *_mesh, unsigned int _dofPerControlPoint=0, unsigned int _numberOfDerivatives=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reinit</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>ac03c72bc46b872a6e8658b43f8764851</anchor>
+      <arglist>(knotSpan&lt; dim &gt; &amp;_cell, std::vector&lt; std::vector&lt; double &gt; &gt; *specialQuadPoints=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; double &gt; &amp;</type>
+      <name>quadraturePoints_coords</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a7138dd7d054efe89392d74efec9f8912</anchor>
+      <arglist>(unsigned int q)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>JxW</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a1b012e9f823bd6bea08018690a62810e</anchor>
+      <arglist>(unsigned int q)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>JxW_face</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a274318e059411d62de61bff0ce686cff</anchor>
+      <arglist>(unsigned int q, unsigned int faceID)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>JxW_line</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a2f7fb0b84179108c7212c1b74c58dd04</anchor>
+      <arglist>(unsigned int q, unsigned int lineID)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>JxW_plane</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a5901c199c93eb54934b4439f34e60301</anchor>
+      <arglist>(unsigned int q, unsigned int planeID)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>shape_value</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>aaccdadf5b081707c27122f046d201d76</anchor>
+      <arglist>(unsigned int i, unsigned int q)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>shape_value_face</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>ab05ba6bfef39b2ce58da13b8a3430aec</anchor>
+      <arglist>(unsigned int i, unsigned int q, unsigned int faceID)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>shape_value_line</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>ae1d3a67f18fbb6ce46fd0345821e20db</anchor>
+      <arglist>(unsigned int i, unsigned int q, unsigned int lineID)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>shape_value_plane</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>ac983989d2bfc9217c542aaeece42bae0</anchor>
+      <arglist>(unsigned int i, unsigned int q, unsigned int planeID)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; double &gt; &amp;</type>
+      <name>shape_grad</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>ac924db02cd620cd33f21d505fa632652</anchor>
+      <arglist>(unsigned int i, unsigned int q)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; double &gt; &amp;</type>
+      <name>shape_grad_face</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a82fa07b1ecea4baba76dfdb8e5b691ab</anchor>
+      <arglist>(unsigned int i, unsigned int q, unsigned int faceID)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; double &gt; &amp;</type>
+      <name>shape_grad_line</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a1d283d89cf218392b392691a1f8fd442</anchor>
+      <arglist>(unsigned int i, unsigned int q, unsigned int lineID)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; double &gt; &amp;</type>
+      <name>shape_grad_plane</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>acf1087e6750d5ad56397dcc6211c7ed9</anchor>
+      <arglist>(unsigned int i, unsigned int q, unsigned int planeID)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+      <name>shape_grad_grad</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a501ca7a88c8cf4ee2e990a490531780a</anchor>
+      <arglist>(unsigned int i, unsigned int q)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+      <name>shape_grad_grad_face</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>aff4a3e65ab8430f0379293b74f83582b</anchor>
+      <arglist>(unsigned int i, unsigned int q, unsigned int faceID)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+      <name>shape_grad_grad_line</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a6784b6a48dd884a7916aae925a0df6c9</anchor>
+      <arglist>(unsigned int i, unsigned int q, unsigned int lineID)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+      <name>shape_grad_grad_plane</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>aa8478ff7cf9a9b357dd8eb8c03b866b8</anchor>
+      <arglist>(unsigned int i, unsigned int q, unsigned int planeID)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>system_to_component_index</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>aaf334ed3dcc055104406ecde01f1d02d</anchor>
+      <arglist>(unsigned int dof)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>system_to_controlpoint_index</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a9d58f821441b0643a783355cdd492595</anchor>
+      <arglist>(unsigned int dof)</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::vector&lt; unsigned int &gt; &gt;</type>
+      <name>quadratureMap</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a8ad34867f75a94d2df4e907af0736242</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::vector&lt; unsigned int &gt; &gt;</type>
+      <name>LinequadratureMap</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>ac4b612f93d06ad96f986ae2fe026fd6e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::vector&lt; unsigned int &gt; &gt;</type>
+      <name>PlanequadratureMap</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>aede81094c7828d9588bf9a0488d609d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>knotSpan&lt; dim &gt; *</type>
+      <name>cell</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>ad5f0d76eb7de9b028b95c4d8a51e4b10</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>n_quadrature_points</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a9c7d9c7fb716cfdb566cbb970b33d7a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>n_face_quadrature_points</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a071ebee2fd7d93b675687c14d65f424d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>n_line_quadrature_points</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a6f5d9cd1fb909db19dd99910d2810fa7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>n_plane_quadrature_points</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a4e0c55845c319909c3223ed1e1e180a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>dofs_per_cell</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>ac8631dd58aee4188cda6e9f20ec35784</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>controlpoints_per_cell</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>afc3bbcf9c06aec882757bdc23066d133</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>dofPerControlPoint</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>ad70bbec5a123c64170bd705c984db81b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>numberOfDerivatives</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a105d2995c85e6d8aba99e4ecb727feef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <name>quadPointLocations</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a75baea2e1483eb6e0fc4720fcc348dd6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>NURBSMesh&lt; dim &gt; *</type>
+      <name>mesh</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>acb057dab390e5fcc1535821be9eef3b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <name>QuadPoints_coords</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>ac2cba20730131c4c620280e534394a87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; double &gt;</type>
+      <name>quadPtStencil</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a10ab4ab272db9bd35d82b4f43a0bd1b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <name>defaultQuadPoints</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a12f2919404365f5a76806028704b33e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <name>basisValue</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a2a080a3af60b8c24f688dd991cf063e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; std::vector&lt; std::vector&lt; double &gt; &gt; &gt;</type>
+      <name>basisDx</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>af9926e17a3452d65352fdf2cf1ba690e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; std::vector&lt; std::vector&lt; std::vector&lt; double &gt; &gt; &gt; &gt;</type>
+      <name>basisDDx</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>aced1ef8b30970c9a429265006b7365c7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; double &gt;</type>
+      <name>jacobian</name>
+      <anchorfile>class_i_g_a_values.html</anchorfile>
+      <anchor>a6ce5c63388f93b84356c39cecf845f9a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>knotSpan</name>
+    <filename>classknot_span.html</filename>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>knotSpan</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>a2bbd3b8808a179bcff09cdaa0b010911</anchor>
+      <arglist>(unsigned int _id, nativeNURBSStructure&lt; dim &gt; &amp;mesh, NURBSMesh&lt; dim &gt; &amp;nurbsmesh, std::vector&lt; unsigned int &gt; &amp;tempIndices, IGAValues&lt; dim &gt; &amp;fe_values)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>pointInKnotSpan</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>a5af81b5247da4508e8c826e1d213589e</anchor>
+      <arglist>(std::vector&lt; double &gt; &amp;coords)</arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>id</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>ab7ce6f462afaf105224b0ca772a33c43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>boundaryFlags</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>a451659067febe7e2e81b2c4d4f0e2cfe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>lineFlags</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>a0e997d1381395d44c3197a5d9f7cc51d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>planeFlags</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>aedae35bacc1a9d1ad8c1a66634168b8f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>defectFlags</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>a5acd6487285d6b66e8c828f5520d6d9f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>Sp_planeQuad_Point</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>af6549454332e5ff475fa443cc9355003</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>Sp_lineQuad_Point</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>a779a6dc660669233b869e997ce602565</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <name>endKnots</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>a6060d3a5cd226cdc8cd1f7e03a21cd5b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <name>edgeCoords</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>a6bb9849604d7951249a4ba43d519ef6c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>center</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>ad43710c86ffc2481bee5ad736dc3f593</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>controlPoint_cross_surface_cof</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>afdbd1d24a1baa43dddbaf349c9dd308e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; controlPoint&lt; dim &gt; * &gt;</type>
+      <name>controlPoints</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>a3c3169272be399ef6b145d5b4be23d27</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>local_dof_indices</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>ae21ab7f49c7f7eb1388828cb995e991f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>local_mass_dof_indices</name>
+      <anchorfile>classknot_span.html</anchorfile>
+      <anchor>a4adf33e51ac52d81ea947463a1ee7f86</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>model</name>
+    <filename>classmodel.html</filename>
+    <templarg>T</templarg>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>model</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>af758be52317607e28c2b633561d322f6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~model</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a16ddd8ff1148e1272bdb68346ca40f2e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reinit</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>acaf4d29522750cddb7a47a3d2c1a9a7c</anchor>
+      <arglist>(parametersClass &amp;_params)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>getResidual</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a7ce5374d8af7b9033ea8f867d98140ad</anchor>
+      <arglist>(knotSpan&lt; dim &gt; &amp;cell, IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 1, T &gt; &amp;R, unsigned int currentIteration)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>residualForMechanics</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a3527d22b532eff79464c80e1278cc747</anchor>
+      <arglist>(knotSpan&lt; dim &gt; &amp;cell, IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 1, T &gt; &amp;R)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>residualForNeummanBC</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a0b91e13bc8069f86d3fcf2ee4b20af49</anchor>
+      <arglist>(knotSpan&lt; dim &gt; &amp;cell, IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 1, T &gt; &amp;R)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>residualForHighOrderBC</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>af7e94259478ec59c1d6cc39587fa6bb7</anchor>
+      <arglist>(knotSpan&lt; dim &gt; &amp;cell, IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 1, T &gt; &amp;R)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>evaluateStress</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a2dbc2c3d62502380868345bbae1fe921</anchor>
+      <arglist>(IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 3, T &gt; &amp;P, dealii::Table&lt; 4, T &gt; &amp;Beta, int faceID=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getDeformationMapWithGradient</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a068e3867c864777b9a52413b84ff6f0a</anchor>
+      <arglist>(IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, deformationMapwithGrad&lt; T, dim &gt; &amp;defMap, int faceID=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>evaluateScalarFunction</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>abbfa09dd9e953a6c9a9c061742a45498</anchor>
+      <arglist>(IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 1, T &gt; &amp;U, int faceID=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>evaluateScalarFunctionGradient</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a331f6ce0fbd5ce39fb729e71f59adb24</anchor>
+      <arglist>(IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 2, T &gt; &amp;gradU, deformationMap&lt; T, dim &gt; &amp;defMap, bool gradientInCurrentConfiguration, int faceID=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>evaluateVectorFunction</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a90120c88ccda55371c88497eb343d0e9</anchor>
+      <arglist>(IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 2, T &gt; &amp;U, int faceID=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>evaluateVectorFunctionGradient</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>aa1ef362e381a305a63e610473fa6c1cc</anchor>
+      <arglist>(IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 3, T &gt; &amp;GradU, int faceID=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>evaluateVectorFunctionSecondGradient</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>ac71ba2ba96a273cdc2082e1d0e4e0cfa</anchor>
+      <arglist>(IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 4, T &gt; &amp;GradGradU, int faceID=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getFreeEnergy</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a9367a2615e14faf3a2a46ee970dfa823</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getGradientFreeEnergy</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>ac5654e151813cd1ca788e351b3b444f5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>parametersClass *</type>
+      <name>params</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>ae1c0153d7b5edc9579a14fc7ea9ff7f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>DOF</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>aa251ebc6c3e308de09e369358bbeb658</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>finiteStrain</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>acc1bd40e5ee90dba7ad7b1f2c44bc3c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>iteration</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a3e7281ce4c066f36b6e124341d46fa97</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>freeEnergy</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>aeb41a1777cde3269b434733b555eabe9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>interfaceEnergy</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a38704ef0de393007d6da45a3ddee89c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>lambda</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a3db359547eed8cfd48ca821d95f577af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>mu</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a74577585cf12d1712ab9c57616d49205</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>muSG</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a0b8f22e000e43ce18d3a55d9b81abb81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>l</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a59e80b8ba32c12c6d0a868f17a19ae48</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>gamma</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a72f9e01745b3a8203067ab84aefc9aea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>C</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a8987032f6f7d7cfaa0ff4e2a62ae08fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>NumKnotInterval</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>ae77a0989b6c5341b26355eb555e61503</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>he</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a1d8f95203b021600bdd1f27fd508e8e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>load</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>a8a23f389715acfc88ae4000ab00600f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const char *</type>
+      <name>bcType</name>
+      <anchorfile>classmodel.html</anchorfile>
+      <anchor>ab59b84599509eac74a94e7dbdde1a0f3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>nativeNURBSStructure</name>
+    <filename>classnative_n_u_r_b_s_structure.html</filename>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>nativeNURBSStructure</name>
+      <anchorfile>classnative_n_u_r_b_s_structure.html</anchorfile>
+      <anchor>a74a07faa61c99036a92f8588b5fa5589</anchor>
+      <arglist>(const char *_hdf5FileName)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~nativeNURBSStructure</name>
+      <anchorfile>classnative_n_u_r_b_s_structure.html</anchorfile>
+      <anchor>a4afa13216aa26d5b5288dea803c312ac</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>readHDF5</name>
+      <anchorfile>classnative_n_u_r_b_s_structure.html</anchorfile>
+      <anchor>ac548e1c7d2ffef7bcbd78ff7a83598a7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>const char *</type>
+      <name>hdf5FileName</name>
+      <anchorfile>classnative_n_u_r_b_s_structure.html</anchorfile>
+      <anchor>a4e68b5822c84c10aa17f4bc3d52fcffd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>order</name>
+      <anchorfile>classnative_n_u_r_b_s_structure.html</anchorfile>
+      <anchor>af5572c412ce04e2dc69cf730343d3aa8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>numCtrlPts</name>
+      <anchorfile>classnative_n_u_r_b_s_structure.html</anchorfile>
+      <anchor>a44fb1c4f87156ade9d7ddcdfb208a40e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <name>knots</name>
+      <anchorfile>classnative_n_u_r_b_s_structure.html</anchorfile>
+      <anchor>ab44a1f3ea032db876d72e5dcd413f38a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <name>ctrlPtCoefs</name>
+      <anchorfile>classnative_n_u_r_b_s_structure.html</anchorfile>
+      <anchor>a5b842af3bfee8bcaeec5f036f7e190ff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::vector&lt; unsigned int &gt; &gt;</type>
+      <name>ctrlPtKnots</name>
+      <anchorfile>classnative_n_u_r_b_s_structure.html</anchorfile>
+      <anchor>a6066b781b4c75db43b74d5f5e859b600</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>NURBSMesh</name>
+    <filename>class_n_u_r_b_s_mesh.html</filename>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>NURBSMesh</name>
+      <anchorfile>class_n_u_r_b_s_mesh.html</anchorfile>
+      <anchor>a8338f4dfef2d91eada879f1cf32bf82c</anchor>
+      <arglist>(nativeNURBSStructure&lt; dim &gt; &amp;mesh, unsigned int _dofPerControlPoint, unsigned int _quadPtStencilSize)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~NURBSMesh</name>
+      <anchorfile>class_n_u_r_b_s_mesh.html</anchorfile>
+      <anchor>a702c7811718ff3f5e444e036bdd95e35</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>dofPerControlPoint</name>
+      <anchorfile>class_n_u_r_b_s_mesh.html</anchorfile>
+      <anchor>ad70bbec5a123c64170bd705c984db81b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>quadPtStencilSize</name>
+      <anchorfile>class_n_u_r_b_s_mesh.html</anchorfile>
+      <anchor>a537e9cacc0c45f819a280eb15e357004</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; controlPoint&lt; dim &gt; &gt;</type>
+      <name>controlPointVector</name>
+      <anchorfile>class_n_u_r_b_s_mesh.html</anchorfile>
+      <anchor>a05ae2c38f5ba806ca6a661d66a34373d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; knotSpan&lt; dim &gt; &gt;</type>
+      <name>knotSpanVector</name>
+      <anchorfile>class_n_u_r_b_s_mesh.html</anchorfile>
+      <anchor>a3af4d62d4b6f0e8f6175fcf28f406326</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>parametersClass</name>
+    <filename>classparameters_class.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setDouble</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>a3bbb8ec5b4f0e219f3229b76c5155d6d</anchor>
+      <arglist>(std::string param, double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setInt</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>af0266daacaed42bd1b641176363ae9ac</anchor>
+      <arglist>(std::string param, int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setBool</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>a2e934b90f4b1a2aa37c76368911e68bf</anchor>
+      <arglist>(std::string param, bool value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setString</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>a1ebd7dee83d68fe3c29a49172440816d</anchor>
+      <arglist>(std::string param, std::string value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getDouble</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>a40b9baa33a85fa60f5df2996d7dec98b</anchor>
+      <arglist>(std::string param)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getInt</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>aa97dc7db4ec450afd1cb8bd0d8e00d12</anchor>
+      <arglist>(std::string param)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>getBool</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>a7c4393bb42319d396ddf38c2464c7062</anchor>
+      <arglist>(std::string param)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>getString</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>a988c0deb4c2cf7e8ed80e39498c1eb58</anchor>
+      <arglist>(std::string param)</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::map&lt; std::string, int &gt;</type>
+      <name>pInt</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>ac8ac4bc08d6cb6aed011bb1d0fc1203f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::map&lt; std::string, double &gt;</type>
+      <name>pDouble</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>a1e0e610c04bda534bcd48bb81ad75ffc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::map&lt; std::string, bool &gt;</type>
+      <name>pBool</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>abb7d3139bc101537c7f85fedfe94da2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::map&lt; std::string, std::string &gt;</type>
+      <name>pString</name>
+      <anchorfile>classparameters_class.html</anchorfile>
+      <anchor>a3453601308e73bcc0f45ed6ea8a9959b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>solutionClass</name>
+    <filename>classsolution_class.html</filename>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>solutionClass</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>a984e6a9f1ded1bcb07780620f0fa4512</anchor>
+      <arglist>(NURBSMesh&lt; dim &gt; &amp;_mesh, dataLocation location, dataType data, std::string _variableName)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~solutionClass</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>ae8858b2cf46ea134c270e914ef6287f3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createMassMatrix</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>a01d5f49fb82353ab11f641fdfcec66ee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>projectQuadratureValues</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>ae70d9a24b72ff939553897624e357787</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double &amp;</type>
+      <name>operator()</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>af65b0553f06103372b6e7d2454dfeb2b</anchor>
+      <arglist>(unsigned int _a)</arglist>
+    </member>
+    <member kind="function">
+      <type>double &amp;</type>
+      <name>operator()</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>a1eefa65ec92e601b6eb3cf5f512e151d</anchor>
+      <arglist>(unsigned int _a, unsigned int _b)</arglist>
+    </member>
+    <member kind="function">
+      <type>double &amp;</type>
+      <name>operator()</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>a2e4c7f80f27405a96717c2f1916e69a5</anchor>
+      <arglist>(unsigned int _a, unsigned int _b, unsigned int _c)</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>values</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>a2ad192c64ff93c02f9f41c320e7aa1bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>projectedValues</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>a99bc6cedc2c43878fa8277617832137d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>dataLocation</type>
+      <name>datalocation</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>a68f0a2ca27a3dfc16bad545b0efc05cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>dataType</type>
+      <name>datatype</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>afdfe5a5866373dbfb2039032ccd38b87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>numQuadPoints</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>afa18ad8bc1a8584affcb5f4299de2679</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>numVariablesPerPoint</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>a055690b47dca927a13457e961734f56c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>variableName</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>a59d46e3a43f711d89d0f4d760094c499</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static sparseMatrix *</type>
+      <name>massMatrix</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>adfa755077924d33569a8f5016c36d100</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static sparsityPattern *</type>
+      <name>mass_sparsity_pattern</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>aa115eb7171ba3cc7743634407481336a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>NURBSMesh&lt; dim &gt; *</type>
+      <name>mesh</name>
+      <anchorfile>classsolution_class.html</anchorfile>
+      <anchor>acb057dab390e5fcc1535821be9eef3b5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>sparseMatrix</name>
+    <filename>classsparse_matrix.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>sparseMatrix</name>
+      <anchorfile>classsparse_matrix.html</anchorfile>
+      <anchor>aca324bc11d8b1ace141a81527c7e0c1a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reinit</name>
+      <anchorfile>classsparse_matrix.html</anchorfile>
+      <anchor>a8614decb09891afe1ec2822f41e6bb81</anchor>
+      <arglist>(sparsityPattern &amp;_sparsitypattern)</arglist>
+    </member>
+    <member kind="function">
+      <type>double &amp;</type>
+      <name>operator()</name>
+      <anchorfile>classsparse_matrix.html</anchorfile>
+      <anchor>afc8bf5dab68296520fcb28419bfc2320</anchor>
+      <arglist>(unsigned int _a, unsigned int _b)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>val</name>
+      <anchorfile>classsparse_matrix.html</anchorfile>
+      <anchor>ac3f054c109f0da42bd96c853b2d828e5</anchor>
+      <arglist>(unsigned int _a, unsigned int _b)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator=</name>
+      <anchorfile>classsparse_matrix.html</anchorfile>
+      <anchor>a1671a1fa0c46d148a8ded171f44b9ced</anchor>
+      <arglist>(double _value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print</name>
+      <anchorfile>classsparse_matrix.html</anchorfile>
+      <anchor>a388f572c62279f839ee138a9afbdeeb5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>nonZeroValues</name>
+      <anchorfile>classsparse_matrix.html</anchorfile>
+      <anchor>a5f480a8a63ebeef6960715dbadff3d22</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>sparsityPattern *</type>
+      <name>sparsitypattern</name>
+      <anchorfile>classsparse_matrix.html</anchorfile>
+      <anchor>adf5fd44980fcc5b2ebd753ed22132505</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>sparsityPattern</name>
+    <filename>classsparsity_pattern.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>sparsityPattern</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>a0a804cd6419704862b3887d263192f3e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>a02dc4359f81b5ca385168f717543d270</anchor>
+      <arglist>(NURBSMesh&lt; 1 &gt; *mesh, bool _isMassMatrixPattern=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>ae19995c493bb49e554b88acc0cf0c87b</anchor>
+      <arglist>(NURBSMesh&lt; 2 &gt; *mesh, bool _isMassMatrixPattern=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>a87f271169a33ebbcb9241ec8eb13dd4d</anchor>
+      <arglist>(NURBSMesh&lt; 3 &gt; *mesh, bool _isMassMatrixPattern=false)</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::map&lt; unsigned int, unsigned int &gt; &gt;</type>
+      <name>nzMap</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>a7230f83b803a8c758d7236e6d74cdff3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; int &gt;</type>
+      <name>columnIndices</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>a2d8c9bd298a81d0c33c4530e3b9ba3d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; int &gt;</type>
+      <name>rowIndex</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>ab588fd5b064deb652ea1bbc5d65dc613</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>nnz</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>afca0fdbd34d24c5f642e61d6aac08e8f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>isMassMatrixPattern</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>a2ce9259fe39559d7119175e1476df22d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::map&lt; unsigned int, std::set&lt; unsigned int &gt; &gt;</type>
+      <name>DOFConnections</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>aa930d6f44667c8fd4da6f291eb048c46</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>intialize</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>a4eee311e2318f6214a875518f0a85cdb</anchor>
+      <arglist>(std::vector&lt; knotSpan&lt; 1 &gt; &gt; &amp;knotSpanVector)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>intialize</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>a5aece2b8d56f3be4a6713744cc866cf5</anchor>
+      <arglist>(std::vector&lt; knotSpan&lt; 2 &gt; &gt; &amp;knotSpanVector)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>intialize</name>
+      <anchorfile>classsparsity_pattern.html</anchorfile>
+      <anchor>a1264ba35d62c23d5f686d06d17cd9836</anchor>
+      <arglist>(std::vector&lt; knotSpan&lt; 3 &gt; &gt; &amp;knotSpanVector)</arglist>
+    </member>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/src/IGA/function</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
+    <filename>dir_befdaa4ceaaa36f92d2284b60d82c8d0.html</filename>
+    <file>apply_boundary_conditions.cc</file>
+    <file>apply_initial_values.cc</file>
+    <file>assemble_system.cc</file>
+    <file>assemble_system_interval.cc</file>
+    <file>condenseKandRHS.cc</file>
+    <file>mark_boundaries.cc</file>
+    <file>output.cc</file>
+    <file>run.cc</file>
+    <file>setup.cc</file>
+    <file>setupCellValues.cc</file>
+    <file>solve.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/include/headers</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/headers/</path>
+    <filename>dir_ac256b92f7e9ff3d6f14e60694f7ad9c.html</filename>
+    <file>headers_c.h</file>
+    <file>headers_dealii.h</file>
+    <file>headers_IGA.h</file>
+    <file>headers_solver.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/src/IGA</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/</path>
+    <filename>dir_01a69242ff982ee364fa5a075bd6c359.html</filename>
+    <dir>openIGA/src/IGA/function</dir>
+    <dir>openIGA/src/IGA/IGAbase</dir>
+    <dir>openIGA/src/IGA/solver</dir>
+    <file>IGA.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/src/IGA/IGAbase</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/IGAbase/</path>
+    <filename>dir_b03120844abbb2b02cf240d6d527f694.html</filename>
+    <file>IGAnurbs.cc</file>
+    <file>IGAvalue.cc</file>
+    <file>nativeNURBSStructure.cc</file>
+    <file>NURBSMesh.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/include/IGAbase</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/IGAbase/</path>
+    <filename>dir_b64186cdc48ee366536bc61e2016f8e9.html</filename>
+    <file>NURBSClass.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/include</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/</path>
+    <filename>dir_d3db8ce9074782b19d96c2ba9a0afc0d.html</filename>
+    <dir>openIGA/include/headers</dir>
+    <dir>openIGA/include/IGAbase</dir>
+    <dir>openIGA/include/model</dir>
+    <dir>openIGA/include/solver</dir>
+    <dir>openIGA/include/supplementary</dir>
+    <file>IGA.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/src/model</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/model/</path>
+    <filename>dir_07154c81bf2163d9a151c981495b529c.html</filename>
+    <file>constitutive.cc</file>
+    <file>evaluateStress.cc</file>
+    <file>functionEvaluations.cc</file>
+    <file>getDeformationMapWithGradient.cc</file>
+    <file>getEnergy.cc</file>
+    <file>getResidual.cc</file>
+    <file>model.cc</file>
+    <file>reinit.cc</file>
+    <file>residualForHighOrderBC.cc</file>
+    <file>residualForMechanics.cc</file>
+    <file>residualForNeummanBC.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/include/model</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/model/</path>
+    <filename>dir_f07b22cc7a28b2d0808c7f5b83bb8e17.html</filename>
+    <file>model.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/</path>
+    <filename>dir_fb414b6550896094a37f510916de5bfd.html</filename>
+    <dir>openIGA/include</dir>
+    <dir>openIGA/src</dir>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/src/IGA/solver</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/solver/</path>
+    <filename>dir_c93776d43db02e7eb078c45477711148.html</filename>
+    <file>superLU_solver.cc</file>
+    <file>superLUMT_solver_bad.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/include/solver</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/solver/</path>
+    <filename>dir_dbce6c3125f04932439e345cfda284df.html</filename>
+    <file>superLU_solver.h</file>
+    <file>superLUMT_solver.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/src</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/</path>
+    <filename>dir_ce32a619c909f0121590f04421eaef60.html</filename>
+    <dir>openIGA/src/IGA</dir>
+    <dir>openIGA/src/model</dir>
+    <dir>openIGA/src/supplementary</dir>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/src/supplementary</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/src/supplementary/</path>
+    <filename>dir_9274e92e2db418f23c7d67eb99ab395c.html</filename>
+    <file>dataStruct_tem.h</file>
+    <file>parameters.cc</file>
+    <file>solutionClass.cc</file>
+    <file>sparsityDataClass.cc</file>
+    <file>supplementaryFunctions.h</file>
+    <file>vtkFunctions.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>openIGA/include/supplementary</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/include/supplementary/</path>
+    <filename>dir_d507e1077c5c0675efff34f0b1d84edf.html</filename>
+    <file>dataStruct.h</file>
+    <file>parameters.h</file>
+    <file>solutionClass.h</file>
+    <file>sparsityDataClass.h</file>
+    <file>supplementaryFunctions.h</file>
+    <file>vtkFunctions.h</file>
+  </compound>
+</tagfile>

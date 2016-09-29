@@ -1,7 +1,5 @@
 openIGA code: openIGA provides NURBS wraped in Generic FEM commands
 
-from the Computational Physics Group at the University of Michigan, adviser: Prof. Krishna Garikipati
-
 
 List of contributors:
 

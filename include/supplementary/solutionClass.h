@@ -29,10 +29,14 @@ class solutionClass{
 		
 	public:
 	 	/*
-	 	*class constructor and destructor
+	 	*class constructor
 		*resize values vector according to data type
 	 	*/
 		solutionClass(NURBSMesh<dim>& _mesh, dataLocation location, dataType data, std::string  _variableName);
+		
+	 	/*
+	 	*class destructor
+	 	*/
 		~solutionClass();
 		
 		/*
@@ -57,9 +61,12 @@ class solutionClass{
 		
 		/*
 		*dataLocation: at NODAL or QUADRATURE
-		*datatype:SCALAR, VECTOR or TENSOR
 		*/
 		dataLocation datalocation;
+		
+		/*
+		*datatype:SCALAR, VECTOR or TENSOR
+		*/
 		dataType datatype;
 		
 		/*
@@ -70,6 +77,11 @@ class solutionClass{
 			if ((datalocation==NODAL) && (datatype==SCALAR)) return values.at(_a);
 			else {printf("solutionClass: incompatible arguments\n 1"); exit(-1);}
 		}
+		
+		/*
+		*operator  overloading
+		*return values 
+		*/
 		double& operator() (unsigned int _a, unsigned int _b) {
 			if (datalocation==NODAL){
 				if (datatype==VECTOR) return values.at(_a*dim+_b);
@@ -79,6 +91,11 @@ class solutionClass{
 			else if ((datalocation==QUADRATURE) && (datatype==SCALAR)) return values.at(_a*numQuadPoints +_b);
 			else {printf("solutionClass: incompatible arguments\n 2"); exit(-1);}
 		}
+		
+		/*
+		*operator  overloading
+		*return values 
+		*/
 		double& operator() (unsigned int _a, unsigned int _b, unsigned int _c) {
 			if (datalocation==QUADRATURE){
 				if (datatype==VECTOR) return values.at(_a*numQuadPoints*dim+_b*dim+_c);
@@ -90,20 +107,27 @@ class solutionClass{
 		
 		/*
 		*numQuadPoints=mesh->quadPtStencilSize 
-		*numVariablesPerPoint=dim for vector;=dim*dim for tensor
 		*/
 		unsigned int numQuadPoints;
+		
+		/*
+		*numVariablesPerPoint=dim for vector;=dim*dim for tensor
+		*/
 		unsigned int numVariablesPerPoint;
+		
 		/*
 		*solution name to be shown in vtk file
 		*/
 		std::string variableName;
 		
 		/*
-		*massMatrix and corresponding sparsityPattern 
-		*only for projection use
+		*massMatrix: jacobian for projection use
 		*/
 		static sparseMatrix* massMatrix;
+		
+		/*
+		*parsityPattern for projection use
+		*/
 		static sparsityPattern* mass_sparsity_pattern;
 };
 

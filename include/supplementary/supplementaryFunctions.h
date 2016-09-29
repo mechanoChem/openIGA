@@ -42,10 +42,10 @@ inline double Bin(unsigned int i, unsigned int j) {
 
 template <class T, int dim>
 inline T determinantOfMinor(unsigned int theRowHeightY, unsigned int theColumnWidthX, dealii::Table<2, T>& matrix){
-  unsigned int x1 = theColumnWidthX == 0 ? 1 : 0;  /** always either 0 or 1 */
-  unsigned int x2 = theColumnWidthX == 2 ? 1 : 2;  /** always either 1 or 2 */
-  unsigned int y1 = theRowHeightY   == 0 ? 1 : 0;  /** always either 0 or 1 */
-  unsigned int y2 = theRowHeightY   == 2 ? 1 : 2;  /** always either 1 or 2 */
+  unsigned int x1 = theColumnWidthX == 0 ? 1 : 0;  /* always either 0 or 1 */
+  unsigned int x2 = theColumnWidthX == 2 ? 1 : 2;  /* always either 1 or 2 */
+  unsigned int y1 = theRowHeightY   == 0 ? 1 : 0;  /* always either 0 or 1 */
+  unsigned int y2 = theRowHeightY   == 2 ? 1 : 2;  /* always either 1 or 2 */
   return matrix[y1][x1]*matrix[y2][x2] - matrix[y1][x2]*matrix[y2][x1];
 }
 

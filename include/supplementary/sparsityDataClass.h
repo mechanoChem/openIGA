@@ -21,11 +21,21 @@ class sparsityPattern
 {	
 	private:
 		/**
-		*initialize with different dim
+		*initialize with dim=1
 		*fill DOFConnections, nzMap, columnIndices and rowIndex
 		*/
 		void intialize(std::vector<knotSpan<1> >& knotSpanVector);
+		
+		/**
+		*initialize with dim=2
+		*fill DOFConnections, nzMap, columnIndices and rowIndex
+		*/
 		void intialize(std::vector<knotSpan<2> >& knotSpanVector);
+		
+		/**
+		*initialize with dim=3
+		*fill DOFConnections, nzMap, columnIndices and rowIndex
+		*/
 		void intialize(std::vector<knotSpan<3> >& knotSpanVector);
 	public:
 		/**
@@ -34,17 +44,33 @@ class sparsityPattern
 		sparsityPattern();
 		
 		/**
-		*initialize with different dim for users
+		*initialize with dim=1 for users
 		*/
 		void init(NURBSMesh<1>* mesh, bool _isMassMatrixPattern=false);
+		
+		/**
+		*initialize with dim=2 for users
+		*/
 		void init(NURBSMesh<2>* mesh, bool _isMassMatrixPattern=false);
+		
+		/**
+		*initialize with dim=3 for users
+		*/
 		void init(NURBSMesh<3>* mesh, bool _isMassMatrixPattern=false);
 		
 		/**
 		*map of non-zeros/zero entries
 		*/
 		std::vector<std::map<unsigned int, unsigned int> > nzMap;
+		
+		/**
+		*column Indices
+		*/
 		std::vector<int> columnIndices;
+		
+		/**
+		*row indices
+		*/
 		std::vector<int> rowIndex;
 		/**
 		*nnz:nonzero value size
@@ -95,25 +121,38 @@ class denseVector
 {	
 	public:
 		/**
-		*two sparsityPattern class constructors
+		*constructors
 		*/
 		denseVector();
+		
+		/**
+		*constructors with _size
+		*/
 		denseVector(unsigned int _size);
 		
 		/**
 		*values store all value of the denseVector
-		*size:size of the vector
-		*L2_norm: sum of (a_i)^2
 		*/
 		std::vector<double> values;
+		
+		/**
+		*size of the vector
+		*/
 		unsigned int size();
+		
+		/**
+		*L2_norm: sum of (a_i)^2
+		*/
 		double l2_norm();
 		
 		/**
-		*reinit(sparsityPattern& sparsitypattern): generate denseVector corresponding to sparse Matrix
-		* reinit(unsigned int _size): generate senseVector with size "_size"
+		*generate denseVector corresponding to sparse Matrix
 		*/
 		void reinit(sparsityPattern& sparsitypattern);
+		
+		/**
+		*generate dsenseVector with size "_size"
+		*/
 		void reinit(unsigned int _size);
 		
 		/**

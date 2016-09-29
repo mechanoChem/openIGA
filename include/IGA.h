@@ -1,4 +1,4 @@
-/***
+/**
 *IGA.h declares class IGA 
 *class IGA provides generic commands of FEM at domain level with support of IGAValues and NURBSMesh
 *default setting only solve a simple boundary value problem for debugging
@@ -26,10 +26,14 @@ class IGA
 {
 public:
 	/**
-	*IGA constructor and destructor
+	*IGA constructor
 	*IGA class need NURBS mesh and parameter class as input
 	*/
   IGA (NURBSMesh<dim>& _mesh, parametersClass& _params);
+	
+	/**
+	*IGA destructor
+	*/
   ~IGA();
 	
 	/**
@@ -95,11 +99,19 @@ public:
   virtual void assemble_system_interval (const typename std::vector<knotSpan<dim> >::iterator &begin, const typename std::vector<knotSpan<dim> >::iterator &end);
 
 	/**
-	*pointer to NURBSMesh and model
+	*pointer to NURBSMesh
 	*reference of paramtersClass
 	*/
   NURBSMesh<dim>* mesh;
+	
+	/**
+	*reference of paramtersClass
+	*/
   parametersClass& params;
+	
+	/**
+	*pointer to model
+	*/
   model<Sacado::Fad::DFad<double>,dim>* modelexample;
 	
 	/**
@@ -110,17 +122,33 @@ public:
 	
 	/**
 	* define sparsity pattern for sparse matrix
-	*system_matrix:jacobian materix
 	*/
   sparsityPattern sparsity_pattern;
+	
+	/**
+	*system_matrix:jacobian materix
+	*/
   sparseMatrix system_matrix;
 	
 	/**
 	*system_rhs:right hand side of linear system 
-	*U: current solution; Un: solution of previous step iteration; 
+	*/
+  denseVector  system_rhs;
+	
+	/**
+	*U: current solution
+	*/
+	denseVector  U;
+	
+	/**
+ 	*Un: solution of previous step iteration; 
+	*/
+	denseVector  Un;
+	
+	/**
 	*dU:step change of during iteration used in Newton method
 	*/
-  denseVector  system_rhs, U, Un, dU;
+	denseVector  dU;
 	
 	/**
 	*dirichletMap: for applying diirclet boundary condition
@@ -134,10 +162,18 @@ public:
 	
 	/**
 	*for loading step by step, numIncrements can be specified NOTE: function run need to overwrite it accordingly
+	*/
+	unsigned int numIncrements;
+	
+	/**
 	*currentIncrement: current increment of loading
+	*/
+	unsigned int currentIncrement;
+	
+	/**
 	*currentIteration:current time step in iteration algorithm 
 	*/
-	unsigned int numIncrements, currentIncrement, currentIteration;
+	unsigned int currentIteration;
 
 	/**
 	*using deal.iii threads manager

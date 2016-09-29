@@ -35,9 +35,13 @@ class model
 public:
 	
  	/**
- 	*model constructor and destructor
+ 	*model constructor
  	*/
   model ();
+	
+ 	/**
+ 	*model destructor
+ 	*/
   ~model();
 	
 	/**
@@ -81,19 +85,39 @@ public:
 	void getDeformationMapWithGradient(IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, deformationMapwithGrad<T, dim>& defMap, int faceID=-1);
 	
 	/**
-	*Evaluate functions using quadrature points (first three dof e.g. displacements) interpolation
-	*Include scalar/vector functions and its first and second derivatives 
+	*Evaluate scalar functions using quadrature points (first three dof e.g. displacements) interpolation
 	*/
 	void evaluateScalarFunction(IGAValues<dim>& fe_values, dealii::Table<1, T>& ULocal, dealii::Table<1, T>& U,  int faceID =-1);
+	
+	/**
+	*Evaluate scalar functions gradient using quadrature points (first three dof e.g. displacements) interpolation 
+	*gradientInCurrentConfiguration is to be actived when evaluate gradient at current configuration
+	*/
 	void evaluateScalarFunctionGradient(IGAValues<dim>& fe_values, dealii::Table<1, T>& ULocal, dealii::Table<2, T>& gradU, deformationMap<T, dim>& defMap, bool gradientInCurrentConfiguration, int faceID =-1);
+	
+	/**
+	*Evaluate vector functions using quadrature points (first three dof e.g. displacements) interpolation
+	*/
 	void evaluateVectorFunction(IGAValues<dim>& fe_values, dealii::Table<1, T>& ULocal, dealii::Table<2, T>& U,  int faceID =-1);
+	
+	/**
+	*Evaluate vector functions gradient using quadrature points (first three dof e.g. displacements) interpolation
+	*/ 
 	void evaluateVectorFunctionGradient(IGAValues<dim>& fe_values, dealii::Table<1, T>& ULocal, dealii::Table<3, T>& GradU, int faceID =-1);
+	
+	/**
+	*Evaluate vector functions second gradient using quadrature points (first three dof e.g. displacements) interpolation
+	*/ 
 	void evaluateVectorFunctionSecondGradient(IGAValues<dim>& fe_values, dealii::Table<1, T>& ULocal, dealii::Table<4, T>& GradGradU, int faceID =-1);
 	
 	/**
-	*return freeEnergy and gradient energy, integration over element
+	*return freeEnergy integration over element
 	*/
 	double getFreeEnergy();
+	
+	/**
+	*return gradient energy integration over element
+	*/
 	double getGradientFreeEnergy();
 	
 	/**
@@ -118,31 +142,71 @@ public:
 	unsigned int iteration;
 	
 	/**
-	*freeEnergy and gradient energy, integration over element
+	*freeEnergy integration over element
 	*/
 	double freeEnergy;
+	
+	/**
+	*gradient energy integration over element
+	*/
 	double interfaceEnergy;
 	
 	/**
 	*material parameters
-	*muSG:mu for strain gradient term(beta) usually is same with mu
-	*l is gradient length scale
-	*gamma and C are parameters for weakly enforces the higher-order Dirichlet boundary condition using a penalty-based approach
+
 	*deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
 	*title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" 
 	*/
   double lambda;
+	
+	/**
+	*material parameters
+	*elasticity constant
+	*deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+	*title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" 
+	*/
   double mu;
+	
+	/**
+	*material parameters
+	*muSG:mu for strain gradient term(beta) usually is same with mu
+	*deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+	*title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" 
+	*/
   double muSG;
+	
+	/**
+	*material parameters
+	*l is gradient length scale
+	*deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+	*title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" 
+	*/
 	double l;
+	
+	/**
+	*material parameters
+	*gamma is parameter for weakly enforces the higher-order Dirichlet boundary condition using a penalty-based approach
+	*deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+	*title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" 
+	*/
   double gamma;
+	
+	/**
+	*material parameters
+	*C is parameter for weakly enforces the higher-order Dirichlet boundary condition using a penalty-based approach
+	*deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+	*title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" 
+	*/
   double C;
 	
 	/**
 	*NumKnotInterval:number of knot interval used in weakly applying higher order boundary condition
-	*he=1.0/NumKnotInterval;
 	*/
 	double NumKnotInterval;
+	
+	/**
+	*he=1.0/NumKnotInterval;
+	*/
   double he;
 	
 	/**

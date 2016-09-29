@@ -119,7 +119,12 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a124ee8bb8b2320155885af588352932b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbasis_function.html#a124ee8bb8b2320155885af588352932b">evaluateN</a> (unsigned int i, unsigned int localKnotIndex, unsigned int _p, double xi, unsigned int k=0)</td></tr>
 <tr class="separator:a124ee8bb8b2320155885af588352932b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;int dim&gt;<br/>
+class basisFunction&lt; dim &gt;</h3>
+
+<p>NURBS basis function formula </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2418397f007fa7417ba738841b5ca46e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -132,6 +137,7 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>basisFunction constructor and destructor </p>
 
 </div>
 </div>
@@ -185,6 +191,7 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>recursive evaluation of value of NURBS using Cox-DeBoor recursion formula </p>
 
 </div>
 </div>
@@ -201,6 +208,7 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>detect control point inside knot span (danger in use) </p>
 
 </div>
 </div>
@@ -217,6 +225,7 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>detect control point which belongs to the knotspan e.g. value is nonzero </p>
 
 </div>
 </div>
@@ -243,6 +252,7 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>evaluate value of basisfunction:N*weight </p>
 
 </div>
 </div>
@@ -256,6 +266,7 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>p_i+2 localKnots vector along each i^th direction store coordinates of control points inside local knots </p>
 
 </div>
 </div>
@@ -268,6 +279,7 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>p_i: order along each i^th direction p[a]=mesh.order[a] </p>
 
 </div>
 </div>
@@ -280,6 +292,7 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>weight of control point weight=mesh.ctrlPtCoefs[dim].at(id); </p>
 
 </div>
 </div>

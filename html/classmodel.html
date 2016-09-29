@@ -175,6 +175,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>model constructor and destructor </p>
 
 </div>
 </div>
@@ -229,6 +230,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Evaluate functions using quadrature points (first three dof e.g. displacements) interpolation Include scalar/vector functions and its first and second derivatives </p>
 
 </div>
 </div>
@@ -331,6 +333,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Evaluate deformation gradient at given quadrature points Calculate Piola- kirchho stress and higher order stress Beta </p>
 
 </div>
 </div>
@@ -483,6 +486,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Evaluate gradient of deformation tensor Evaluate determinate and inverse of deformation tensor </p>
 
 </div>
 </div>
@@ -498,6 +502,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return freeEnergy and gradient energy, integration over element </p>
 
 </div>
 </div>
@@ -565,6 +570,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>main entrance to call all individual "residual" functions user may overwrite it </p>
 
 </div>
 </div>
@@ -581,6 +587,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>re-initialize parameter class </p>
 
 </div>
 </div>
@@ -627,6 +634,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>residual for high order boundary condition User may use it directly though it is virtual </p>
 
 </div>
 </div>
@@ -665,6 +673,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>residual for regular stress and high order stress </p>
 
 </div>
 </div>
@@ -711,6 +720,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>residual for neumman boundary condition user should overwrite it </p>
 
 </div>
 </div>
@@ -724,6 +734,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>type of boundary condition </p>
 
 </div>
 </div>
@@ -748,6 +759,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>current dof of residual DOF=0 (default) for evaluating residual of mechanical term </p>
 
 </div>
 </div>
@@ -760,6 +772,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>finite strain=true, using finite strain elasticity </p>
 
 </div>
 </div>
@@ -772,6 +785,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>freeEnergy and gradient energy, integration over element </p>
 
 </div>
 </div>
@@ -820,6 +834,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>current iteration </p>
 
 </div>
 </div>
@@ -844,6 +859,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>material parameters muSG:mu for strain gradient term(beta) usually is same with mu l is gradient length scale gamma and C are parameters for weakly enforces the higher-order Dirichlet boundary condition using a penalty-based approach deatials explanations of these parameters can be found at "Rudraraju, Van der Ven, Garikipati, Comp. Meth. App. Mech. Engrg., 278 705, 2014,
+title: Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains" </p>
 
 </div>
 </div>
@@ -856,6 +873,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>may only used for example (redundant) </p>
 
 </div>
 </div>
@@ -892,6 +910,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>NumKnotInterval:number of knot interval used in weakly applying higher order boundary condition he=1.0/NumKnotInterval; </p>
 
 </div>
 </div>
@@ -904,6 +923,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>pointer to material paramters </p>
 
 </div>
 </div>

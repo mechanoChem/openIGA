@@ -16,7 +16,7 @@ Krishna Garikipati
 
 Overview
 =======================================================================
-openIGA is a an isogeometric analysis based lib. It provides Nonuniform Rational B-Splines (NURBS) basis functions with generic finite element method commands for solving partial differential equations. Tt uses the automatic differentiation capabilities of the Sacado package from the Trilino library [https://trilinos.org/packages/sacado/], and it used deal.ii[www.dealii.org/download.html] for threads management. Currently the code is multi-threaded.
+openIGA is a an isogeometric analysis based lib. It provides Nonuniform Rational B-Splines (NURBS) basis functions with generic finite element method commands for solving partial differential equations. It uses the automatic differentiation capabilities of the Sacado package from the Trilino library [https://trilinos.org/packages/sacado/], and it used deal.ii[www.dealii.org/download.html] for threads management. Currently the code is multi-threaded.
 
 
 Version information
@@ -83,7 +83,7 @@ Reference
 =======================================================================
 If you write a paer using results obtained with the help of this code,  please consider citing one or more of the following:
 
-1) Z, Wang, S. Rudraraju, K. Garikipati, “A three dimensional field formulation, and isogeometric solutions to point and line defects using Toupin's theory of gradient elasticity at finite strains”, Journal of the Mechanics and Physics of Solids, Vol. 94: 336-361, 2016, doi:10.1016/j.jmps.2016.03.028 [http://arxiv.org/abs/1405.3293]
+1) Z, Wang, S. Rudraraju, K. Garikipati, “A three dimensional field formulation, and isogeometric solutions to point and line defects using Toupin's theory of gradient elasticity at finite strains”, Journal of the Mechanics and Physics of Solids, Vol. 94: 336-361, 2016, doi:10.1016/j.jmps.2016.03.028 [http://arxiv.org/abs/1508.07035]
 
 2) S. Rudraraju, A. Van der Ven, K. Garikipati, “Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains”, Computer Methods in Applied Mechanics and Engineering Vol 278: 705-728, 2014 [http://arxiv.org/abs/1404.0094]
 

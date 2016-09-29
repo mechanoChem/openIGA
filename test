@@ -187,6 +187,11 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>README.md</name>
+    <path>/home/wzhenlin/workspace/GitHub/openIGA/</path>
+    <filename>_r_e_a_d_m_e_8md</filename>
+  </compound>
+  <compound kind="file">
     <name>apply_boundary_conditions.cc</name>
     <path>/home/wzhenlin/workspace/GitHub/openIGA/src/IGA/function/</path>
     <filename>apply__boundary__conditions_8cc</filename>
@@ -2317,5 +2322,10 @@
     <file>sparsityDataClass.h</file>
     <file>supplementaryFunctions.h</file>
     <file>vtkFunctions.h</file>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
   </compound>
 </tagfile>

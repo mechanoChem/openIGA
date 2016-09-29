@@ -1,4 +1,3 @@
-warning: source README.md is not a readable file or directory... skipping.
 warning: source initBoundValProbs is not a readable file or directory... skipping.
 error: Tag file `deal.tag' does not exist or is not a file. Skipping it...
 /home/wzhenlin/workspace/GitHub/openIGA/src/supplementary/dataStruct_tem.h:5: warning: documented symbol `template deformationMap< Sacado::Fad::DFad< double >, 1 >' was not declared or defined.

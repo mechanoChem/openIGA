@@ -1,4 +1,4 @@
-/*
+/**
 * superLU_MT solver declartion
 */
 

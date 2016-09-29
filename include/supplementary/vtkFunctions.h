@@ -1,4 +1,4 @@
-/*
+/**
 * Generate VTK file for results
 */
 
@@ -17,14 +17,14 @@
 using namespace std;
 
 template <int dim>
-/*
+/**
 *write VTK file called inside of writeMesh
 */
 void writeVTK(const char* vtkFileName, std::vector<int>& numPoints, std::vector<std::vector<double> >& coords, std::vector<solutionClass<dim>*>& outputVariables, std::vector<std::vector<double> >& values);
 
 template <int dim>
 
-/*
+/**
 *write VTK file for user
 */
 void writeMesh(const char* meshFileName, unsigned int _cycle, NURBSMesh<dim>* mesh, std::vector<int> outputGridSize, std::vector<solutionClass<dim>* >& outputVariables);

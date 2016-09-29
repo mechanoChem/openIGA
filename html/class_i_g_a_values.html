@@ -200,7 +200,12 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a6ce5c63388f93b84356c39cecf845f9a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_g_a_values.html#a6ce5c63388f93b84356c39cecf845f9a">jacobian</a></td></tr>
 <tr class="separator:a6ce5c63388f93b84356c39cecf845f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;int dim&gt;<br/>
+class IGAValues&lt; dim &gt;</h3>
+
+<p>IGA value class </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8a6c0bc1fad171c62706c183ddcd27ea"></a>
 <div class="memitem">
 <div class="memproto">
@@ -230,6 +235,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>IGAvalue constructor and destructor </p>
 
 </div>
 </div>
@@ -247,6 +253,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return JxW of volume, face, line and plane </p>
 
 </div>
 </div>
@@ -341,6 +348,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return coords of quadPoints in physical space </p>
 
 </div>
 </div>
@@ -367,6 +375,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>update IGAValue for each cell </p>
 <p>inverse jacobian matrix, the "full size matrix" </p>
 
 </div>
@@ -394,6 +403,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return shape_value first derivatives at quadrature points of volume, face, line and plane </p>
 
 </div>
 </div>
@@ -452,6 +462,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return shape_value second derivatives at quadrature points of volume, face, line and plane </p>
 
 </div>
 </div>
@@ -638,6 +649,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return shape_value at quadrature points of volume, face, line and plane </p>
 
 </div>
 </div>
@@ -750,6 +762,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return # of dof at control point at this # of dofs_per_cell return # of control point at this # of dofs_per_cell </p>
 
 </div>
 </div>
@@ -827,6 +840,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>basis function value and its first and second derivative at each quadrature point determinant of jacobian times weight at each quadrature point (include quadpoints on plane and line) </p>
 
 </div>
 </div>
@@ -839,6 +853,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>pointer to knotSpan ofer another way to access knotSpan by IGAValues </p>
 
 </div>
 </div>
@@ -871,6 +886,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>quadrature points rule used </p>
 
 </div>
 </div>
@@ -895,6 +911,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>dofs_per_cell: total number of dofs of this cell controlpoints_per_cell: total controlpoints of this cell dofPerControlPoint: dof per control point numberOfDerivatives: number Of Derivatives of basis function </p>
 
 </div>
 </div>
@@ -947,6 +964,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>pointer to NURBSMesh </p>
 
 </div>
 </div>
@@ -995,6 +1013,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>number of quadrature_points of volume, boundary surface, marked line and marked plane </p>
 
 </div>
 </div>
@@ -1031,6 +1050,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>quad point including additional quadpoints (face, line and plane) positions in physical space </p>
 
 </div>
 </div>
@@ -1051,6 +1071,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>quadrature point coordinates in real domain </p>
 
 </div>
 </div>
@@ -1071,6 +1092,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>quadrature point stencil (up to 9 points formula) </p>
 
 </div>
 </div>
@@ -1083,6 +1105,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>if cell contains boundary or marked line and plane quadratureMap: get # of quadpoint at boundary face LinequadratureMap: get # of quadpoint along line PlanequadratureMap: get # of quadpoint on plane </p>
 
 </div>
 </div>

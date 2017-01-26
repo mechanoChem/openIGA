@@ -1,4 +1,4 @@
-openIGA code: openIGA provides NURBS wraped in Generic FEM commands
+openIGA code: openIGA provides NURBS wrapped in Generic FEM commands
 
 
 List of contributors:

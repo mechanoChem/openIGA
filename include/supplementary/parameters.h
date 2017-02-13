@@ -9,6 +9,7 @@
 #include <string.h>
 #include <map>
 #include <deal.II/base/point.h>
+template<int dim>
 class parametersClass{
  public:
 	 /**
@@ -19,26 +20,20 @@ class parametersClass{
   void setBool(std::string param, bool value, bool print=false);
   void setString(std::string param, std::string value, bool print=false);
 	
-	void setPoint(std::string param, dealii::Point<3> value, bool print=false);
-	void setPoint(std::string param, dealii::Point<2> value, bool print=false);
-	void setPoint(std::string param, dealii::Point<1> value, bool print=false);
+	void setPoint(std::string param, dealii::Point<dim> value, bool print=false);
 	
   double getDouble(std::string param);
   int getInt(std::string param);
   bool getBool(std::string param);
   std::string getString(std::string param);
-	dealii::Point<3> getPoint(std::string param);
-	dealii::Point<2> getPoint(std::string param);
-	dealii::Point<1> getPoint(std::string param);
+	dealii::Point<dim> getPoint(std::string param);
   //void readInParameters(std::string fileName);
  private:
   std::map<std::string, int> pInt;
   std::map<std::string, double> pDouble;
   std::map<std::string, bool> pBool;
   std::map<std::string, std::string> pString;
-	std::map<std::string, dealii::Point<3> > pPoint3;
-	std::map<std::string, dealii::Point<2> > pPoint2;
-	std::map<std::string, dealii::Point<1> > pPoint1;
+	std::map<std::string, dealii::Point<dim> > pPoint;
 };
 
 #endif

@@ -3,75 +3,66 @@
 *class for storage parameters
 *type could be: double, int, bool, string, dealii::Point
 */
-
+template<int dim>
 void parametersClass::setDouble(std::string param, double value, bool print){
   pDouble[param.c_str()]=value;
   if(print) printf("%s:%12.6e\n", param.c_str(), value);  
 }
+template<int dim>
 void parametersClass::setInt(std::string param, int value, bool print){
   pInt[param.c_str()]=value;
   if(print) printf("%s:%u\n", param.c_str(), value);
 }
+template<int dim>
 void parametersClass::setBool(std::string param, bool value, bool print){
   pBool[param.c_str()]=value;
   if(print) printf("%s:%u\n", param.c_str(), value);
 }
+template<int dim>
 void parametersClass::setString(std::string param, std::string value, bool print){
   pString[param.c_str()]=value;
   if(print) printf("%s:%s\n", param.c_str(), value.c_str());
 }
-
+template<int dim>
 void parametersClass::setString(std::string param, std::string value, bool print){
   pString[param.c_str()]=value;
   if(print) printf("%s:%s\n", param.c_str(), value.c_str());
 }
-
-void parametersClass::setPoint(std::string param, dealii::Point<3> value, bool print){
-  pPoint3[param.c_str()]=value;
+template<int dim>
+void parametersClass::setPoint(std::string param, dealii::Point<dim> value, bool print){
+  pPoint[param.c_str()]=value;
   if(print) printf("%s:%s\n", param.c_str(), value.c_str());
 }
-
-void parametersClass::setPoint(std::string param, dealii::Point<2> value, bool print){
-  pPoint2[param.c_str()]=value;
-  if(print) printf("%s:%s\n", param.c_str(), value.c_str());
-}
-
-void parametersClass::setPoint(std::string param, dealii::Point<1> value, bool print){
-  pPoint1[param.c_str()]=value;
-  if(print) printf("%s:%s\n", param.c_str(), value.c_str());
-}
-
+template<int dim>
 double parametersClass::getDouble(std::string param){
   if (pDouble.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
   return pDouble[param.c_str()];
 }
+template<int dim>
 int parametersClass::getInt(std::string param){
   if (pInt.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
   return pInt[param.c_str()];
 }
+template<int dim>
 bool parametersClass::getBool(std::string param){
   if (pBool.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
   return pBool[param.c_str()];
 }
+template<int dim>
 std::string parametersClass::getString(std::string param){
   if (pString.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
   return pString[param.c_str()];
 }
 
-dealii::Point<3> getPoint(std::string param){
-  if (pPoint3.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
-  return pPoint3[param.c_str()];
+template<int dim>
+dealii::Point<dim> getPoint(std::string param){
+  if (pPoint.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
+  return pPoint[param.c_str()];
 }
 
-dealii::Point<2> getPoint(std::string param){
-  if (pPoint2.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
-  return pPoint2[param.c_str()];
-}
-
-dealii::Point<1> getPoint(std::string param){
-  if (pPoint1.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
-  return pPoint1[param.c_str()];
-}
+template parameter<1>;
+template parameter<2>;
+template parameter<3>;
 /*
 void parametersClass::readInParameters(std::string fileName){
   //read parameters from file

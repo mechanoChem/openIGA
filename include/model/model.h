@@ -7,8 +7,6 @@
 *
 *for user:user should define their physics based model derived from this base model. 
 */
-
-
 #ifndef MODEL_h
 #define MODEL_h
 
@@ -53,12 +51,12 @@ public:
 	*main entrance to call all individual "residual" functions
 	*user may overwrite it
 	*/
-  virtual void getResidual(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R,unsigned int currentIteration);
+  virtual void getResidualIni(dealii::Table<1, T >& R,unsigned int currentIteration);
 
 	/**
 	*residual for regular stress and high order stress
 	*/
-	void residualForMechanics(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R);
+	virtual void residualForMechanics(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R);
 
 	/**
 	*residual for neumman boundary condition

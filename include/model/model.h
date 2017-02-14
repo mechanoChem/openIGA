@@ -45,7 +45,7 @@ public:
 	/**
 	*re-initialize parameter class
 	*/
-	void reinit(parametersClass& _params);
+	void reinit(parametersClass<dim>& _params);
 	
 	/**
 	*main entrance to call all individual "residual" functions

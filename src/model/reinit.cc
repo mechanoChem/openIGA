@@ -3,7 +3,7 @@
 *re-initialize parameters for class model
 */
 template <class T, int dim>
-void model<T, dim>::reinit(parametersClass& _params)
+void model<T, dim>::reinit(parametersClass<dim>& _params)
 {
 	params=&_params;
   lambda= params->getDouble("lambda");

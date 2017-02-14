@@ -3,7 +3,7 @@
 using namespace std;
 
 template<int dim>
-IGA<dim>::IGA (NURBSMesh<dim>& _mesh,parametersClass& _params): mesh(&_mesh),params(_params)
+IGA<dim>::IGA (NURBSMesh<dim>& _mesh,parametersClass<dim>& _params): mesh(&_mesh),params(_params)
 {
 
 }

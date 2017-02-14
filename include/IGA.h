@@ -107,7 +107,7 @@ public:
 	/**
 	*reference of paramtersClass
 	*/
-  parametersClass& params;
+  parametersClass<dim>& params;
 	
 	/**
 	*pointer to model

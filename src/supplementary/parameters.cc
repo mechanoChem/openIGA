@@ -23,11 +23,7 @@ void parametersClass<dim>::setString(std::string param, std::string value, bool 
   pString[param.c_str()]=value;
   if(print) printf("%s:%s\n", param.c_str(), value.c_str());
 }
-template<int dim>
-void parametersClass<dim>::setString(std::string param, std::string value, bool print){
-  pString[param.c_str()]=value;
-  if(print) printf("%s:%s\n", param.c_str(), value.c_str());
-}
+
 template<int dim>
 void parametersClass<dim>::setPoint(std::string param, dealii::Point<dim> value, bool print){
   pPoint[param.c_str()]=value;
@@ -60,9 +56,9 @@ dealii::Point<dim> parametersClass<dim>::getPoint(std::string param){
   return pPoint[param.c_str()];
 }
 
-template parameter<1>;
-template parameter<2>;
-template parameter<3>;
+template class parameter<1>;
+template class parameter<2>;
+template class parameter<3>;
 /*
 void parametersClass::readInParameters(std::string fileName){
   //read parameters from file

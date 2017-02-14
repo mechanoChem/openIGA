@@ -57,7 +57,7 @@ SET (SUPERLU_INC "/home/wzhenlin/software/SuperLU_4.3/SRC/")
 SET (SUPERLU_LIB "/home/wzhenlin/software/SuperLU_4.3/lib/libsuperlu_4.3.a")
 
 INCLUDE_DIRECTORIES(${hdfInclude} ${SUPERLU_INC} ${szip_INC})
-TARGET_LINK_LIBRARIES(main myIGA ${hdfLibrary} ${hdfLibrary2} ${SUPERLU_LIB} ${szip_LIB})
+TARGET_LINK_LIBRARIES(main openIGA ${hdfLibrary} ${hdfLibrary2} ${SUPERLU_LIB} ${szip_LIB})
 
 
 

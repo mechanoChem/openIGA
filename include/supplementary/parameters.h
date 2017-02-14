@@ -20,7 +20,7 @@ class parametersClass{
   void setBool(std::string param, bool value, bool print=false);
   void setString(std::string param, std::string value, bool print=false);
 	
-	void setPoint(std::string param, dealii::Point<dim> value, bool print=false);
+	void setPoint(std::string param, double value[dim], bool print=false);
 	
   double getDouble(std::string param);
   int getInt(std::string param);

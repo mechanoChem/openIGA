@@ -34,7 +34,7 @@ void IGA<dim>::assemble_system_interval (const typename std::vector<knotSpan<dim
     
     for(unsigned int i=0; i<dofs_per_cell; ++i) R[i]=0.0; 
 		
-		modelexample->getResidual(*cell, fe_values, ULocal, R, currentIteration);
+		modelexample->getResidualIni(R, currentIteration);
 			
     //Residual(R) and Jacobian(R')
     for (unsigned int i=0; i<dofs_per_cell; ++i) {

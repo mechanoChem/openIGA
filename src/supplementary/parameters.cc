@@ -25,9 +25,11 @@ void parametersClass<dim>::setString(std::string param, std::string value, bool 
 }
 
 template<int dim>
-void parametersClass<dim>::setPoint(std::string param, dealii::Point<dim> value, bool print){
-  pPoint[param.c_str()]=value;
-  if(print) printf("%s is a Point\n", param.c_str());
+void parametersClass<dim>::setPoint(std::string param, double value[dim], bool print){
+  for(unsigned int i=0;i<dim;i++){
+    pPoint[param.c_str()][i]=value[i];
+    if(print) printf("%s[%u]=%%12.6e\n",param.c_str(),i, value[i]);
+  }
 }
 template<int dim>
 double parametersClass<dim>::getDouble(std::string param){

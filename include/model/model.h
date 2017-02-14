@@ -121,7 +121,7 @@ public:
 	/**
 	*pointer to material paramters
 	*/
-	parametersClass* params;
+	parametersClass<dim>* params;
 	
 	/**
 	*current dof of residual

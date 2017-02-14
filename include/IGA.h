@@ -29,7 +29,7 @@ public:
 	*IGA constructor
 	*IGA class need NURBS mesh and parameter class as input
 	*/
-  IGA (NURBSMesh<dim>& _mesh, parametersClass& _params);
+  IGA (NURBSMesh<dim>& _mesh, parametersClass<dim>& _params);
 	
 	/**
 	*IGA destructor

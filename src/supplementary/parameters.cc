@@ -4,58 +4,58 @@
 *type could be: double, int, bool, string, dealii::Point
 */
 template<int dim>
-void parametersClass::setDouble(std::string param, double value, bool print){
+void parametersClass<dim>::setDouble(std::string param, double value, bool print){
   pDouble[param.c_str()]=value;
   if(print) printf("%s:%12.6e\n", param.c_str(), value);  
 }
 template<int dim>
-void parametersClass::setInt(std::string param, int value, bool print){
+void parametersClass<dim>::setInt(std::string param, int value, bool print){
   pInt[param.c_str()]=value;
   if(print) printf("%s:%u\n", param.c_str(), value);
 }
 template<int dim>
-void parametersClass::setBool(std::string param, bool value, bool print){
+void parametersClass<dim>::setBool(std::string param, bool value, bool print){
   pBool[param.c_str()]=value;
   if(print) printf("%s:%u\n", param.c_str(), value);
 }
 template<int dim>
-void parametersClass::setString(std::string param, std::string value, bool print){
+void parametersClass<dim>::setString(std::string param, std::string value, bool print){
   pString[param.c_str()]=value;
   if(print) printf("%s:%s\n", param.c_str(), value.c_str());
 }
 template<int dim>
-void parametersClass::setString(std::string param, std::string value, bool print){
+void parametersClass<dim>::setString(std::string param, std::string value, bool print){
   pString[param.c_str()]=value;
   if(print) printf("%s:%s\n", param.c_str(), value.c_str());
 }
 template<int dim>
-void parametersClass::setPoint(std::string param, dealii::Point<dim> value, bool print){
+void parametersClass<dim>::setPoint(std::string param, dealii::Point<dim> value, bool print){
   pPoint[param.c_str()]=value;
   if(print) printf("%s:%s\n", param.c_str(), value.c_str());
 }
 template<int dim>
-double parametersClass::getDouble(std::string param){
+double parametersClass<dim>::getDouble(std::string param){
   if (pDouble.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
   return pDouble[param.c_str()];
 }
 template<int dim>
-int parametersClass::getInt(std::string param){
+int parametersClass<dim>::getInt(std::string param){
   if (pInt.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
   return pInt[param.c_str()];
 }
 template<int dim>
-bool parametersClass::getBool(std::string param){
+bool parametersClass<dim>::getBool(std::string param){
   if (pBool.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
   return pBool[param.c_str()];
 }
 template<int dim>
-std::string parametersClass::getString(std::string param){
+std::string parametersClass<dim>::getString(std::string param){
   if (pString.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
   return pString[param.c_str()];
 }
 
 template<int dim>
-dealii::Point<dim> getPoint(std::string param){
+dealii::Point<dim> parametersClass<dim>::getPoint(std::string param){
   if (pPoint.count(param.c_str())==0){printf("unknown parameter '%s' requested\n", param.c_str()); exit(-1);}
   return pPoint[param.c_str()];
 }

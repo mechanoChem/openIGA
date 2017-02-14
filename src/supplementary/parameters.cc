@@ -56,9 +56,9 @@ dealii::Point<dim> parametersClass<dim>::getPoint(std::string param){
   return pPoint[param.c_str()];
 }
 
-template class parameter<1>;
-template class parameter<2>;
-template class parameter<3>;
+template class parametersClass<1>;
+template class parametersClass<2>;
+template class parametersClass<3>;
 /*
 void parametersClass::readInParameters(std::string fileName){
   //read parameters from file

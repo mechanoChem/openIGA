@@ -4,7 +4,7 @@
 
 # Set the name of the project and target:
 SET(TARGET "main")
-SET_PROPERTY(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
+#SET_PROPERTY(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
 
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.8)
 
@@ -28,7 +28,7 @@ ENDIF()
 
 
 FILE(GLOB IGAbase_SRC "../src/IGA/IGAbase/*.cc" "../src/IGA/solver/superLU_solver.cc"  "../src/supplementary/*.cc"  "../src/IGA/*.cc" "../src/IGA/function/*.cc" "../src/model/*.cc")
-ADD_LIBRARY(openIGA SHARED ${IGAbase_SRC})
+ADD_LIBRARY(openIGA ${IGAbase_SRC})
 
 
 DEAL_II_SETUP_TARGET(openIGA)
@@ -42,7 +42,7 @@ PROJECT(${TARGET})
 DEAL_II_INVOKE_AUTOPILOT()
 
 #Set "lib" path
-install(TARGETS openIGA DESTINATION /home/wzhenlin/software/IGA/IGA_0.1/lib)
+install(TARGETS openIGA DESTINATION /home/wzhenlin/software/openIGA/lib)
 
 #add external libraries
 

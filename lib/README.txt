@@ -1,0 +1,1 @@
+folder for installing openIGA. After correctly installation, “libopenIGA.a” will appear here. Then you can delete build folder

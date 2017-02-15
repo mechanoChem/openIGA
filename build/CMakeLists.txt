@@ -1,6 +1,24 @@
 ##
 #  CMake script
 ##
+#Code structure and usage
+##---------------------------------------------------------------------------------------------------------------------
+#The openIGA code is basded on deal.ii, trinilios, SuperLU and hdf5
+# this code contains 3 parts in general
+# 1: IGA base: it is self complete. Basically it read .h5 mesh and provides nurbs basis function. 
+#
+# 2: FEM generic functions and superLU solver: It includes IGA base, and provides generic FEM functions and superLU solver
+#
+# 3: supplementary: separately classes providing mesh generator, special data structure and math operators etc.
+#
+# How to install
+# in build folder where you found this CMakeList.txt, change it following guides below
+# $cmake CMakeList.txt
+# $make release install
+# please check "libopenIGA.a" is installed in lib(or other) folder
+# delete this build folder if necessary
+##---------------------------------------------------------------------------------------------------------------------
+##---------------------------------------------------------------------------------------------------------------------
 
 
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.8)
